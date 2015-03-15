@@ -8,11 +8,13 @@
     </head>
     <body>
         {% include header.html %}        <section class="main">
-            <header>
-                <h2>{{ page.title }}</h2>
-            </header>
-            <div class="post">
-                {{ content }}            </div>
+            <article>
+                <header>
+                    <h2>{{ page.title }}</h2>
+                </header>
+                <div class="post">
+                    {{ content }}                </div>
+            </article>
         </section>
         {% include footer.html %}    </body>
 </html>
