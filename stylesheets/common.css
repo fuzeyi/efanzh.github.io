@@ -1,0 +1,154 @@
+.header
+{
+    background-color: white;
+    box-shadow: 0 0 9pt 0 #999;
+    display: flex;
+    justify-content: space-between;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.header a
+{
+    color: inherit;
+    text-decoration: none;
+}
+
+.title
+{
+    font-size: 20pt;
+    line-height: 40pt;
+    margin: 0;
+    padding: 0 0.5em;
+    white-space: nowrap;
+}
+
+.header-right-column
+{
+    align-items: center;
+    display: flex;
+}
+
+.search
+{
+    display: flex;
+    margin-right: 20pt;
+}
+
+.search-textbox, .search-button
+{
+    box-sizing: border-box;
+    font-size: 12pt;
+    height: 18pt;
+}
+
+.search-textbox
+{
+    border: 1pt solid #bbb;
+    padding: 0 18pt 0 0.25em;
+    width: 120pt;
+}
+
+.search-textbox::-ms-clear
+{
+    display: none;
+}
+
+.search-button
+{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -18pt;
+    padding: 0;
+    width: 18pt;
+}
+
+.page-list
+{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.page-list > li
+{
+    list-style-type: none;
+}
+
+.page-list > li:hover
+{
+    background-color: #eee;
+}
+
+.page-list > li > a
+{
+    display: block;
+    line-height: 40pt;
+    padding: 0 1em;
+}
+
+.main
+{
+    background-color: white;
+    border-radius: 2pt;
+    box-shadow: 0 0 4pt 0 #bbb;
+    box-sizing: border-box;
+    margin: 80pt auto 40pt auto;
+    max-width: 720pt;
+}
+
+.main > header
+{
+    backgroud-color: #eee;
+}
+
+.post
+{
+    padding: 20pt;
+}
+
+.main a:link
+{
+    color: #46d;
+    text-decoration: none;
+}
+
+.main a:visited
+{
+    color: #9ad;
+}
+
+.main a:hover
+{
+    text-decoration: underline;
+}
+
+.main a:active
+{
+    color: #24a;
+}
+
+.footer
+{
+    color: #666;
+    font-size: 9pt;
+    text-align: center;
+}
+
+body
+{
+    background-color: #ddd;
+    color: #444;
+    font-family: "Myriad Pro", "Segoe UI", "Segoe UI Symbol", "Source Han Sans", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    font-size: 12pt;
+    margin: 0;
+    padding: 0 20pt;
+}
+
+button, input, textarea
+{
+    font-family: inherit;
+}

@@ -1,0 +1,13 @@
+<header class="header">
+    <div><a href="/"><h1 class="title">{{ site.title }}</h1></a></div>
+    <div class="header-right-column">
+        <form class="search" id="search-form">
+            <input class="search-textbox" id="search-textbox" placeholder="Search" type="text" />
+            <button class="search-button" type="submit">🔍</button>
+        </form>
+        <ul class="page-list">
+{% for page in site.links %}
+            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}        </ul>
+    </div>
+</header>

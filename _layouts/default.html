@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>{{ site.title }}</title>
+        <link rel="stylesheet" type="text/css" href="/stylesheets/common.css">
+        <script src="/scripts/common.js"></script>
+    </head>
+    <body>
+        {% include header.html %}        <section class="main">
+        {{ content }}        </section>
+        {% include footer.html %}    </body>
+</html>
