@@ -18,15 +18,10 @@ First, write a manifest file:
 
 Assume the mainifest file is “app.exe.manifest” and the executable file is “app.exe”, we can use “[mt.exe](http://msdn.microsoft.com/library/aa375649.aspx)” to add the manifest file to the executable file:
 
-```
-mt.exe -manifest "app.exe.manifest" -outputresource:"app.exe"
-```
+    mt.exe -manifest "app.exe.manifest" -outputresource:"app.exe"
 
 If the executable file already contains a manifest, this operation will replace its original manifest. If we don’t want to lose the original manifest file, we can merge the new manifest with the original manifest using following command:
 
-
-```
-mt.exe -manifest "app.exe.manifest" -inputresource:"app.exe" -outputresource:"app.exe"
-```
+    mt.exe -manifest "app.exe.manifest" -inputresource:"app.exe" -outputresource:"app.exe"
 
 You may want to make a backup copy of the original executable file, in case something unexpected happens.

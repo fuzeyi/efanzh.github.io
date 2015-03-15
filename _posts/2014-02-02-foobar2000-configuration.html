@@ -1,0 +1,165 @@
+---
+title: EFanZh’s foobar2000 configuration
+layout: post
+---
+
+<h1>Keyboard shortcuts</h1>
+<table>
+    <caption>Keyboard shortcuts</caption>
+    <thead>
+        <tr>
+            <th>Shortcut</th>
+            <th>Global</th>
+            <th>Type</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>0</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / &lt;not set&gt;</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>1</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / 1</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>2</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / 2</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>3</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / 3</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>4</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / 4</td>
+        </tr>
+        <tr>
+            <td><kbd>Alt</kbd> + <kbd>5</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Playback Statistics / Rating / 5</td>
+        </tr>
+        <tr>
+            <td><kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>F12</kbd></td>
+            <td>Yes</td>
+            <td>[main]</td>
+            <td>Playback / Play or pause</td>
+        </tr>
+        <tr>
+            <td><kbd>J</kbd></td>
+            <td>No</td>
+            <td>[main]</td>
+            <td>Playback / Next</td>
+        </tr>
+        <tr>
+            <td><kbd>K</kbd></td>
+            <td>No</td>
+            <td>[main]</td>
+            <td>Playback / Previous</td>
+        </tr>
+        <tr>
+            <td><kbd>Left</kbd></td>
+            <td>No</td>
+            <td>[main]</td>
+            <td>Playback / Seek / Back by 5 seconds</td>
+        </tr>
+        <tr>
+            <td><kbd>Right</kbd></td>
+            <td>No</td>
+            <td>[main]</td>
+            <td>Playback / Seek / Ahead by 5 seconds</td>
+        </tr>
+        <tr>
+            <td><kbd>Shift</kbd> + <kbd>Delete</kbd></td>
+            <td>No</td>
+            <td>[context]</td>
+            <td>Delete file(s)</td>
+        </tr>
+        <tr>
+            <td><kbd>Space</kbd></td>
+            <td>No</td>
+            <td>[main]</td>
+            <td>Playback / Play or pause</td>
+        </tr>
+    </tbody>
+</table>
+<h1>Custom column schemes</h1>
+<table>
+    <caption>Custom column schemes</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Pattern</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Title // Artists</td>
+            <td><code>&gt;&gt;&gt;%title%&lt;&lt;&lt;[ &lt;&lt;'//' %track artist%&gt;&gt;][ &lt;&lt;'//' %performer%&gt;&gt;]</code></td>
+        </tr>
+        <tr>
+            <td>Rating</td>
+            <td><code>$if2(%rating_stars_fixed%,☆☆☆☆☆)</code></td>
+        </tr>
+        <tr>
+            <td>Play Count</td>
+            <td><code>%play_count%</code></td>
+        </tr>
+        <tr>
+            <td>Sort</td>
+            <td><code>%genre% / %album artist% / %date% / %album% / %discnumber% / %tracknumber% / %title%</code></td>
+        </tr>
+        <tr>
+            <td>Sort 2</td>
+            <td><code>%play_count% / %genre% / %album artist% / %date% / %album% / %discnumber% / %tracknumber% / %title%</code></td>
+        </tr>
+    </tbody>
+</table>
+<h1>Custom grouping schemes</h1>
+<table>
+    <caption>Custom grouping schemes</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Pattern</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>By Album Artist - Album [Date]</td>
+            <td><code>%album artist% - %album%[ '['%date%']']</code></td>
+        </tr>
+    </tbody>
+</table>
+<h1>Misc</h1>
+<table>
+    <caption>Misc</caption>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Pattern</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Standard file name pattern</td>
+            <td><code>$if(%tracknumber%,[%discnumber%.]%tracknumber%. ,%artist% - )%title%</code></td>
+        </tr>
+        <tr>
+            <td>Standard file path pattern</td>
+            <td><code>Artists A-Z\$upper($left(%album artist%,1))\%album artist%\%album%\$if(%tracknumber%,[%discnumber%.]%tracknumber%. ,[%artist% - ])%title%</code></td>
+        </tr>
+    </tbody>
+</table>

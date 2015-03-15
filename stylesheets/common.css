@@ -146,6 +146,37 @@
     font-size: 1em;
 }
 
+.post pre
+{
+    border: 1pt solid #ccc;
+    box-shadow: inset 1pt 1pt 3pt #eee;
+    overflow: auto;
+    padding: 0.5em;
+}
+
+.post > table
+{
+    border-bottom: 2pt solid #555;
+    border-collapse: collapse;
+    border-top: 2pt solid #555;
+    margin: auto;
+}
+
+.post > table > thead
+{
+    border-bottom: 1pt solid #555;
+}
+
+.post > table > thead > tr > th
+{
+    text-align: left;
+}
+
+.post > table > tbody > tr > td, .post > table > thead > tr > th
+{
+    padding: 0 0.5em;
+}
+
 .main a:link
 {
     color: #46d;
