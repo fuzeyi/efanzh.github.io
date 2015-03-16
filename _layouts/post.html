@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8" />
-        <title>{{ page.title }}</title>
-        <link rel="stylesheet" type="text/css" href="/stylesheets/common.css">
-        <link rel="stylesheet" type="text/css" href="/stylesheets/syntax-high-lighting.css">
-        <script src="/scripts/common.js"></script>
-    </head>
+        {% include head-common-1.html %}        <title>{{ page.title }}</title>
+        {% include head-common-2.html %}    </head>
     <body>
         {% include header.html %}        <section class="main">
             <article>
