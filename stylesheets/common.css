@@ -29,12 +29,30 @@
 {
     align-items: center;
     display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.header-right-column > li
+{
+    list-style-type: none;
+}
+
+.header-right-column > li > a
+{
+    display: block;
+    line-height: 48px;
+    padding: 0 1em;
+}
+
+.header-right-column > li > a:hover
+{
+    background-color: #eee;
 }
 
 .search
 {
     display: flex;
-    margin-right: 24px;
 }
 
 .search-textbox, .search-button
@@ -64,30 +82,6 @@
     margin-left: -24px;
     padding: 0;
     width: 24px;
-}
-
-.page-list
-{
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.page-list > li
-{
-    list-style-type: none;
-}
-
-.page-list > li:hover
-{
-    background-color: #eee;
-}
-
-.page-list > li > a
-{
-    display: block;
-    line-height: 48px;
-    padding: 0 1em;
 }
 
 .main

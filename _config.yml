@@ -15,3 +15,7 @@ defaults:
         type: "pages"
     values:
         layout: "default"
+  - scope:
+        path: "scripts"
+    values:
+        layout: nil

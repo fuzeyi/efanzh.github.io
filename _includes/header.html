@@ -2,14 +2,14 @@
     <nav>
         <a href="/"><h1 class="title">{{ site.title }}</h1></a>
     </nav>
-    <div class="header-right-column">
-        <form class="search" id="search-form">
-            <input class="search-textbox" id="search-textbox" placeholder="Search" type="text" />
-            <button class="search-button" type="submit">🔍</button>
-        </form>
-        <ul class="page-list">
-            <li><a href="demos-and-tools.html">Demos &amp; Tools</a></li>
-{% for page in site.links %}            <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}        </ul>
-    </div>
+    <ul class="header-right-column">
+        <li>
+            <form class="search" id="search-form">
+                <input class="search-textbox" id="search-textbox" placeholder="Search" type="text" />
+                <button class="search-button" type="submit">🔍</button>
+            </form>
+        </li>
+        <li><a href="demos-and-tools.html">Demos &amp; Tools</a></li>
+{% for page in site.links %}        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
+{% endfor %}    </ul>
 </header>
