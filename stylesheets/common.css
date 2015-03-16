@@ -1,7 +1,7 @@
 .header
 {
     background-color: white;
-    box-shadow: 0 0 9pt 0 #999;
+    box-shadow: 0 0 12px 0 #999;
     display: flex;
     justify-content: space-between;
     left: 0;
@@ -18,8 +18,8 @@
 
 .title
 {
-    font-size: 20pt;
-    line-height: 40pt;
+    font-size: 24px;
+    line-height: 48px;
     margin: 0;
     padding: 0 0.5em;
     white-space: nowrap;
@@ -34,21 +34,21 @@
 .search
 {
     display: flex;
-    margin-right: 20pt;
+    margin-right: 24px;
 }
 
 .search-textbox, .search-button
 {
     box-sizing: border-box;
-    font-size: 12pt;
-    height: 18pt;
+    font-size: 16px;
+    height: 24px;
 }
 
 .search-textbox
 {
-    border: 1pt solid #bbb;
-    padding: 0 18pt 0 0.25em;
-    width: 120pt;
+    border: 1px solid #bbb;
+    padding: 0 24px 0 0.25em;
+    width: 120px;
 }
 
 .search-textbox::-ms-clear
@@ -61,9 +61,9 @@
     background-color: transparent;
     border: none;
     cursor: pointer;
-    margin-left: -18pt;
+    margin-left: -24px;
     padding: 0;
-    width: 18pt;
+    width: 24px;
 }
 
 .page-list
@@ -86,18 +86,18 @@
 .page-list > li > a
 {
     display: block;
-    line-height: 40pt;
+    line-height: 48px;
     padding: 0 1em;
 }
 
 .main
 {
     background-color: white;
-    border-radius: 2pt;
-    box-shadow: 0 0 4pt 0 #bbb;
+    border-radius: 2px;
+    box-shadow: 0 0 4px 0 #bbb;
     box-sizing: border-box;
-    margin: 80pt auto 40pt auto;
-    max-width: 720pt;
+    margin: 96px auto 48px auto;
+    max-width: 960px;
 }
 
 .main > article > header
@@ -113,7 +113,7 @@
 
 .post
 {
-    padding: 20pt;
+    padding: 24px;
 }
 
 .post h1
@@ -148,23 +148,23 @@
 
 .post pre
 {
-    border: 1pt solid #ccc;
-    box-shadow: inset 1pt 1pt 3pt #eee;
+    border: 1px solid #ccc;
+    box-shadow: inset 1px 1px 3px #eee;
     overflow: auto;
     padding: 0.5em;
 }
 
 .post > table
 {
-    border-bottom: 2pt solid #555;
+    border-bottom: 2px solid #555;
     border-collapse: collapse;
-    border-top: 2pt solid #555;
+    border-top: 2px solid #555;
     margin: auto;
 }
 
 .post > table > thead
 {
-    border-bottom: 1pt solid #555;
+    border-bottom: 1px solid #555;
 }
 
 .post > table > thead > tr > th
@@ -201,7 +201,7 @@
 .footer
 {
     color: #666;
-    font-size: 9pt;
+    font-size: 12px;
     text-align: center;
 }
 
@@ -210,9 +210,9 @@ body
     background-color: #ddd;
     color: #444;
     font-family: "Myriad Pro", "Segoe UI", "Segoe UI Symbol", "Source Han Sans", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-    font-size: 12pt;
+    font-size: 16px;
     margin: 0;
-    padding: 0 20pt;
+    padding: 0 24px;
 }
 
 button, input, textarea
