@@ -116,42 +116,34 @@
     padding: 24px;
 }
 
-.post h1
+.post > h1
 {
     font-size: 1.5em;
 }
 
-.post h2
+.post > h2
 {
     font-size: 1.4em;
 }
 
-.post h3
+.post > h3
 {
     font-size: 1.3em;
 }
 
-.post h4
+.post > h4
 {
     font-size: 1.2em;
 }
 
-.post h5
+.post > h5
 {
     font-size: 1.1em;
 }
 
-.post h6
+.post > h6
 {
     font-size: 1em;
-}
-
-.post pre
-{
-    border: 1px solid #ccc;
-    box-shadow: inset 1px 1px 3px #eee;
-    overflow: auto;
-    padding: 0.5em;
 }
 
 .post > table
