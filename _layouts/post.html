@@ -4,7 +4,7 @@
         {% include head-common-1.html %}        <title>{{ page.title }}</title>
         {% include head-common-2.html %}    </head>
     <body>
-        {% include header.html %}        <section class="main">
+        {% include header.html %}        <main class="main">
             <article>
                 <header>
                     <h2>{{ page.title }}</h2>
@@ -12,6 +12,6 @@
                 <div class="post">
                     {{ content }}                </div>
             </article>
-        </section>
+        </main>
         {% include footer.html %}    </body>
 </html>
