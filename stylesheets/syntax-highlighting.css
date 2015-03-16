@@ -1,15 +1,9 @@
-.highlight
+.highlight > pre, .post > pre
 {
     border: 1px solid #ccc;
     box-shadow: inset 1px 1px 3px #eee;
-    margin: 1em 0;
     overflow: auto;
     padding: 0.5em;
-}
-
-.highlight > pre
-{
-    margin: 0;
 }
 
 .highlight .bp /* Name.Builtin.Pseudo */
