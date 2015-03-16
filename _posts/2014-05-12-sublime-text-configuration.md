@@ -1,6 +1,5 @@
 ---
 title: EFanZh’s Sublime Text configuration
-layout: post
 ---
 
 {% highlight json %}

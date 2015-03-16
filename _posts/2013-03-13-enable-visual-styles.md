@@ -1,6 +1,5 @@
 ---
 title: Enable visual styles on existing applications
-layout: post
 ---
 
 Some old application doesn’t enable [visual styles](http://msdn.microsoft.com/library/bb773187.aspx) by default. But we can add an extra [manifest](http://msdn.microsoft.com/library/aa375365.aspx) file to the application’s executable file to [enable the visual style](http://msdn.microsoft.com/library/bb773175.aspx)
