@@ -29,6 +29,7 @@
 {
     align-items: center;
     display: flex;
+    flex-wrap: nowrap;
     margin: 0;
     padding: 0;
 }
@@ -41,7 +42,9 @@
 .header-right-column > li > *
 {
     display: flex;
+    flex-wrap: nowrap;
     padding: 0 1em;
+    white-space: nowrap;
 }
 
 .header-right-column > li > a
