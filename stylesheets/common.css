@@ -38,11 +38,15 @@
     list-style-type: none;
 }
 
+.header-right-column > li > *
+{
+    display: flex;
+    padding: 0 1em;
+}
+
 .header-right-column > li > a
 {
-    display: block;
     line-height: 48px;
-    padding: 0 1em;
 }
 
 .header-right-column > li > a:hover
@@ -66,7 +70,7 @@
 {
     border: 1px solid #bbb;
     padding: 0 24px 0 0.25em;
-    width: 120px;
+    width: 160px;
 }
 
 .search-textbox::-ms-clear
