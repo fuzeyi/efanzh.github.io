@@ -97,6 +97,7 @@
     border-radius: 2px;
     box-shadow: 0 0 4px 0 #bbb;
     box-sizing: border-box;
+    display: block; /* IE doesn't recognize <main> element. */
     margin: 96px auto 48px auto;
     max-width: 960px;
 }
