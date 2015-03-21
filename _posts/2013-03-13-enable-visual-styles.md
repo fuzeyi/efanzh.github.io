@@ -2,7 +2,7 @@
 title: Enable visual styles on existing applications
 ---
 
-Some old application doesn’t enable [visual styles](http://msdn.microsoft.com/library/bb773187.aspx) by default. But we can add an extra [manifest](http://msdn.microsoft.com/library/aa375365.aspx) file to the application’s executable file to [enable the visual style](http://msdn.microsoft.com/library/bb773175.aspx)
+Some old application doesn’t enable [visual styles](http://msdn.microsoft.com/library/bb773187.aspx) by default. But you can add an extra [manifest](http://msdn.microsoft.com/library/aa375365.aspx) file to the application’s executable file to [enable the visual style](http://msdn.microsoft.com/library/bb773175.aspx).
 
 First, write a manifest file:
 
@@ -17,11 +17,11 @@ First, write a manifest file:
 </assembly>
 {% endhighlight %}
 
-Assume the mainifest file is “app.exe.manifest” and the executable file is “app.exe”, we can use “[mt.exe](http://msdn.microsoft.com/library/aa375649.aspx)” to add the manifest file to the executable file:
+Assume the mainifest file is “app.exe.manifest” and the executable file is “app.exe”, you can use “[mt.exe](http://msdn.microsoft.com/library/aa375649.aspx)” to add the manifest file to the executable file:
 
     mt.exe -manifest "app.exe.manifest" -outputresource:"app.exe"
 
-If the executable file already contains a manifest, this operation will replace its original manifest. If we don’t want to lose the original manifest file, we can merge the new manifest with the original manifest using following command:
+If the executable file already contains a manifest, this operation will replace its original manifest. If you don’t want to lose the original manifest file, you can merge the new manifest with the original manifest using following command:
 
     mt.exe -manifest "app.exe.manifest" -inputresource:"app.exe" -outputresource:"app.exe"
 

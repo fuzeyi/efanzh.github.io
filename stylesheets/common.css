@@ -1,7 +1,8 @@
 .header
 {
-    background-color: white;
-    box-shadow: 0 0 12px 0 #999;
+    background-color: #47a;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.4);
+    color: #fafafa;
     display: flex;
     justify-content: space-between;
     left: 0;
@@ -54,7 +55,7 @@
 
 .header-right-column > li > a:hover
 {
-    background-color: #eee;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .search
@@ -71,9 +72,16 @@
 
 .search-textbox
 {
-    border: 1px solid #bbb;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    outline: none;
     padding: 0 24px 0 0.25em;
     width: 160px;
+}
+
+.search-textbox:focus
+{
+    background-color: white;
 }
 
 .search-textbox::-ms-clear
@@ -95,7 +103,7 @@
 {
     background-color: white;
     border-radius: 2px;
-    box-shadow: 0 0 4px 0 #bbb;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.4);
     box-sizing: border-box;
     display: block; /* IE doesn't recognize <main> element. */
     margin: 96px auto 48px auto;
@@ -104,8 +112,8 @@
 
 .main > article > header
 {
-    background-color: #69b;
-    color: #fff;
+    background-color: #47a;
+    color: #fafafa;
 }
 
 .main > article > header > h2
@@ -151,15 +159,14 @@
 
 .post > table
 {
-    border-bottom: 2px solid #555;
     border-collapse: collapse;
-    border-top: 2px solid #555;
     margin: auto;
 }
 
 .post > table > thead
 {
-    border-bottom: 1px solid #555;
+    background-color: #47a;
+    color: #fafafa;
 }
 
 .post > table > thead > tr > th
@@ -167,9 +174,19 @@
     text-align: left;
 }
 
+.post > table > tbody > tr:nth-child(even)
+{
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 .post > table > tbody > tr > td, .post > table > thead > tr > th
 {
-    padding: 0 0.5em;
+    padding: 0.5em;
+}
+
+.post > table > tbody > tr > td:first-child /* For most name columns */
+{
+    white-space: nowrap;
 }
 
 .main a:link
