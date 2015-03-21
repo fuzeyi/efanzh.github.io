@@ -4,16 +4,15 @@
         <meta charset="utf-8" />
         <title>HTML Sandbox</title>
         <link href="html_sandbox.css" rel="stylesheet" />
-        <script src="html_sandbox.js"></script>
+     <script src="html_sandbox.js"></script>
     </head>
     <body>
-        <header id="header">
+        <header class="header">
             <h1>HTML Sandbox</h1>
-            <hr />
         </header>
-        <section id="main">
-            <aside id="source-container">
-                <textarea autofocus="autofocus" id="source" placeholder="HTML source code." spellcheck="false">&lt;!DOCTYPE html&gt;
+        <main class="main">
+            <aside class="container source-container">
+                <textarea autofocus="autofocus" class="source" placeholder="HTML source code." spellcheck="false">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
         &lt;meta charset="utf-8" /&gt;
@@ -26,14 +25,13 @@
 &lt;/html&gt;
 </textarea>
             </aside>
-            <div id="splitter"></div>
-            <div id="result-container">
-                <iframe title="Preview" id="result"></iframe>
+            <div class="splitter"></div>
+            <div class="container result-container">
+                <iframe title="Preview" class="result"></iframe>
             </div>
-        </section>
-        <footer id="footer">
-            <hr />
-            <p>By EFanZh</p>
+        </main>
+        <footer class="footer">
+            <p>Designed by EFanZh.</p>
         </footer>
     </body>
 </html>
