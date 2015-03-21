@@ -68,13 +68,20 @@
 
     function async_load(src, onload, onerror)
     {
-        data_source.disabled = true;
-        data_source_load_status.innerHTML = "Loading...";
-        data_source_script = d.createElement("script");
-        data_source_script.src = src;
-        data_source_script.onload = onload;
-        data_source_list.onerror = onerror;
-        d.head.appendChild(data_source_script);
+        try
+        {
+            data_source.disabled = true;
+            data_source_load_status.innerHTML = "Loading...";
+            data_source_script = d.createElement("script");
+            data_source_script.src = src;
+            data_source_script.onload = onload;
+            data_source_list.onerror = onerror;
+            d.head.appendChild(data_source_script);
+        }
+        catch (e)
+        {
+            onerror();
+        }
     }
 
     function load_success()
@@ -264,6 +271,10 @@
                 if (val !== undefined && val.length > 0)
                 {
                     return val;
+                }
+                else
+                {
+                    return str;
                 }
             };
         }
