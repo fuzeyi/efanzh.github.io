@@ -19,6 +19,7 @@
 .container
 {
     display: flex;
+    flex-direction: column;
 }
 
 .source-container
@@ -37,7 +38,7 @@
     border: none;
     box-sizing: border-box;
     flex: 1;
-    height: 100%; /* IE needs this. */
+    width: 100%;
 }
 
 .source

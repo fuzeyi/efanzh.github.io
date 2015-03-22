@@ -19,7 +19,9 @@
         result = $(".result");
 
         splitter.onmousedown = function (e) {
+            document.body.style.cursor = "col-resize";
             result.style.pointerEvents = "none";
+
             var w0 = sourceContainer.offsetWidth;
             var x0 = e.x;
             var totalWidth = main.clientWidth - splitter.offsetWidth;
@@ -32,6 +34,7 @@
 
             d.onmouseup = function (e) {
                 result.style.pointerEvents = "";
+                document.body.style.cursor = "";
                 d.onmousemove = null;
                 d.onmouseup = null;
             };
@@ -46,4 +49,3 @@
         };
     });
 })(document);
-//# sourceMappingURL=html_sandbox.js.map

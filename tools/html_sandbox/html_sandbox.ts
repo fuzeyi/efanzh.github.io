@@ -23,7 +23,9 @@
 
         splitter.onmousedown = (e: MouseEvent) =>
         {
+            document.body.style.cursor = "col-resize";
             result.style.pointerEvents = "none";
+
             var w0 = sourceContainer.offsetWidth;
             var x0 = e.x;
             var totalWidth = main.clientWidth - splitter.offsetWidth;
@@ -38,6 +40,7 @@
             d.onmouseup = (e: MouseEvent) =>
             {
                 result.style.pointerEvents = "";
+                document.body.style.cursor = "";
                 d.onmousemove = null;
                 d.onmouseup = null;
             };
