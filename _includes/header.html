@@ -1,15 +1,16 @@
 <header class="header">
-    <nav>
-        <a href="/"><h1 class="title">{{ site.title }}</h1></a>
-    </nav>
-    <ul class="header-right-column">
-        <li>
-            <form class="search" id="search-form">
-                <input class="search-textbox" id="search-textbox" placeholder="Search" type="text" />
-                <button class="search-button" type="submit">🔍</button>
-            </form>
-        </li>
-        <li><a href="/demos-and-tools.html">Demos &amp; Tools</a></li>
-{% for page in site.links %}        <li><a href="{{ page.url }}">{{ page.title }}</a></li>
-{% endfor %}    </ul>
+    <a href="{{ site.baseurl }}/"><h1 class="title">{{ site.title }}</h1></a>
+    <section class="header-right">
+        <form class="search-form" id="search-form">
+            <input class="search-textbox" id="search-textbox" placeholder="Search" type="text" />
+            <button class="search-button" type="submit">🔍</button>
+        </form>
+        <nav>
+            <ul class="nav-list">
+                <li{% if page.url == '/index.html' %} class="selected-page"{% endif %}><a href="{{ site.baseurl }}/">Blog</a></li>
+{% for p in site.my-pages %}                <li{% if p.url == page.url %} class="selected-page"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}{% for p in site.links %}                <li{% if p.url == page.url %} class="selected-page"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
+{% endfor %}            </ul>
+        </nav>
+    </section>
 </header>

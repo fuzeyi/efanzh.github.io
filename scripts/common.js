@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function (e)
     {
         var content = /\S/.test($("#search-textbox").value) ? encodeURIComponent($("#search-textbox").value.trim() + " ") : "";
 
-        window.location = "https://www.google.com/search?q=" + content + "site:{{ site.baseurl }}";
+        window.location = "https://www.google.com/search?q=" + content + "site:{{ site.domain }}{{ site.baseurl }}";
 
         return false;
     };

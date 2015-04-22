@@ -1,6 +1,9 @@
-baseurl: efanzh.github.io
 title: EFanZh’s Blog
 description: ~
+domain: efanzh.github.io
+my-pages:
+  - title: Demos & Tools
+    url: /demos-and-tools.html
 links:
   - title: GitHub
     url: https://github.com/EFanZh
@@ -10,12 +13,3 @@ defaults:
         type: "posts"
     values:
         layout: "post"
-  - scope:
-        path: ""
-        type: "pages"
-    values:
-        layout: "default"
-  - scope:
-        path: "scripts"
-    values:
-        layout: nil
