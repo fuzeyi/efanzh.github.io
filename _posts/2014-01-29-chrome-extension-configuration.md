@@ -2,7 +2,7 @@
 title: EFanZh’s Google Chrome extension configuration
 ---
 
-# SwitchyOmega
+## SwitchyOmega
 
 The current auto switch rule list for GFW is:
 
@@ -10,7 +10,7 @@ The current auto switch rule list for GFW is:
 
 Notice that Google Code will be closed soon, so this list will not be available at that time. The new rule list will be at <http://gfwli.st/>. Although it’s not available at this moment, it will become usable when the migration is completed.
 
-# Stylish
+## Stylish
 
 The globle font style:
 {% highlight css %}
