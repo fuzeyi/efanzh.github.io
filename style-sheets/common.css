@@ -118,8 +118,9 @@
 
 .post-header > h2
 {
+    font-size: 18px;
     margin: 0;
-    padding: 0.5em;
+    padding: 0.75em;
 }
 
 .post-content
@@ -130,27 +131,27 @@
 
 .post-content > h1
 {
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 .post-content > h2
 {
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 
 .post-content > h3
 {
-    font-size: 1.3em;
+    font-size: 1.15em;
 }
 
 .post-content > h4
 {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 .post-content > h5
 {
-    font-size: 1.1em;
+    font-size: 1.05em;
 }
 
 .post-content > h6
