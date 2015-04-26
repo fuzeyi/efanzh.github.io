@@ -1,6 +1,6 @@
 <meta charset="utf-8">
 <title>{{ page.title }}</title>
-<link rel="canonical" href="https://{{ site.domain }}{{ site.baseurl }}{% if page.override-url != null %}{{ page.override-url }}{{ else }}{{ page.url }}{{ endif }}">
+<link rel="canonical" href="https://{{ site.domain }}{{ site.baseurl }}{% if page.override-url != empty %}{{ page.override-url }}{% else %}{{ page.url }}{{ endif }}">
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style-sheets/common.css">
 <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style-sheets/syntax-highlighting.css">
 <script src="{{ site.baseurl }}/scripts/common.js"></script>
