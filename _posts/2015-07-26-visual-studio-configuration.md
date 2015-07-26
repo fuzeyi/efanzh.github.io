@@ -9,11 +9,11 @@ layout: post
 
 #### General
 
-- *Projects location*: <Custom Location>
+- **Projects location**: \<Custom Location\>
 
 #### Build and Run
 
-- *For new solutions use the currently selected project as the startup project*: ☑
+- **For new solutions use the currently selected project as the startup project**: ☑
 
 ### Text Editor
 
@@ -22,12 +22,12 @@ layout: post
 ##### Advanced
 
 - Fallback Location
-    - *Always Use Fallback Location*: True
-    - *Do Not Warn If Fallback Location Used*: True
-    - *Fallback Location*: <Custom Location>
+    - **Always Use Fallback Location**: True
+    - **Do Not Warn If Fallback Location Used**: True
+    - **Fallback Location**: \<Custom Location\>
 
 ### Debugging
 
 #### Symbols
 
-- *Cache symbols in this directory*: <Custom Location>
+- **Cache symbols in this directory**: \<Custom Location\>
