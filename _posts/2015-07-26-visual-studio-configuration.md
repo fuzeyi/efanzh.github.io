@@ -13,9 +13,26 @@ layout: post
 
 #### Build and Run
 
-- **For new solutions use the currently selected project as the startup project**: ☑
+- **On Run, when projects are out of date**: Always build
+- **On Run, when build or deployment errors occur**: Do not launch
+- ☑ **For new solutions use the currently selected project as the startup project**
 
 ### Text Editor
+
+#### All Languages
+
+##### General
+
+- Settings
+    - ☑ **Line numbers**
+    - ☐ **Enable single-click URL navigation**
+    - ☑ **Navigation bar**
+    - ☑ **Automatic brace completion**
+
+##### Tabs
+
+- Tab
+    - 🔘 ** Insert spaces**
 
 #### C/C++
 
