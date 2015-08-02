@@ -43,6 +43,12 @@ layout: post
     - **Do Not Warn If Fallback Location Used**: True
     - **Fallback Location**: \<Custom Location\>
 
+##### Formatting
+
+###### General
+
+- **When I paste**: 🔘 Do nothing
+
 ### Debugging
 
 #### Symbols
