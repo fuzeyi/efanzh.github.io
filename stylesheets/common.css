@@ -106,108 +106,98 @@
 .post
 {
     background-color: white;
+    color: #444;
     border-radius: 2px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
 
-.post-header
+.post > header
 {
     background-color: #2980b9;
 }
 
-.post-header > h1
+.post > header > h1
 {
     font-size: 18px;
     margin: 0;
     padding: 0.75em;
 }
 
-.post-content
-{
-    color: #444;
-    padding: 24px;
-}
-
-.post-content > h1
-{
-    font-size: 1.25em;
-}
-
-.post-content > h2
+.post > h2
 {
     font-size: 1.2em;
 }
 
-.post-content > h3
+.post > h3
 {
     font-size: 1.15em;
 }
 
-.post-content > h4
+.post > h4
 {
     font-size: 1.1em;
 }
 
-.post-content > h5
+.post > h5
 {
     font-size: 1.05em;
 }
 
-.post-content > h6
+.post > h6
 {
     font-size: 1em;
 }
 
-.post-content > table
+.post > table
 {
     border-collapse: collapse;
     margin: auto;
 }
 
-.post-content > table > thead
+.post > table > thead
 {
     background-color: #e74c3c;
     color: #fafafa;
 }
 
-.post-content > table > thead > tr > th
+.post > table > thead > tr > th
 {
     text-align: left;
 }
 
-.post-content > table > tbody > tr:nth-child(even)
+.post > table > tbody > tr:nth-child(even)
 {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-.post-content > table > tbody > tr > td, .post-content > table > thead > tr > th
+.post > table > tbody > tr > td, .post-content > table > thead > tr > th
 {
     padding: 0.5em;
 }
 
-.post-content > table > tbody > tr > td:first-child /* For most name columns */
+.post > table > tbody > tr > td:first-child /* For most name columns */
 {
     white-space: nowrap;
 }
 
-.post-content a:link
+.post a:link
 {
     color: #3498db;
     text-decoration: none;
 }
 
-.post-content a:visited
+.post a:visited
 {
     color: #84c1eb;
 }
 
-.post-content a:hover
+.post a:hover
 {
     text-decoration: underline;
 }
 
-.post-content a:active
+.post a:active
 {
     color: #2f7fb4;
 }
