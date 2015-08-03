@@ -31,7 +31,7 @@ title: EFanZh’s Visual Studio configuration
 ##### Tabs
 
 - Tab
-    - 🔘 ** Insert spaces**
+    - 🔘 **Insert spaces**
 
 #### C/C++
 
