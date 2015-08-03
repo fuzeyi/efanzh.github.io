@@ -10,5 +10,6 @@ links:
 defaults:
   - scope:
         path: ""
+        type: "posts"
     values:
         layout: "page"
