@@ -1,6 +1,5 @@
 ---
 title: EFanZh’s Visual Studio configuration
-layout: post
 ---
 
 ## Options
