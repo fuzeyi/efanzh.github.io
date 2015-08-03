@@ -126,15 +126,17 @@ button, input, textarea
 
 .post
 {
+    box-sizing: border-box;
+    padding: 0 24px 8px;
     background-color: white;
     color: #444;
     border-radius: 2px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
 }
 
 .post > header
 {
+    margin: 0 -24px 24px;
     background-color: #2980b9;
 }
 
