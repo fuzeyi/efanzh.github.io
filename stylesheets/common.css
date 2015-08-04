@@ -148,37 +148,29 @@ button, input, textarea
     padding: 0.75em;
 }
 
-.post > h2, .post > h3, .post > h4, .post > h5, .post > h6
-{
-    padding: 0.5em 24px;
-}
-
 .post > h2
 {
-    font-size: 1.2em;
-    background: #def;
-    color: #37d;
+    font-size: 29.296875px;
 }
 
 .post > h3
 {
-    font-size: 1.15em;
-    color: #483;
+    font-size: 23.4375px;
 }
 
 .post > h4
 {
-    font-size: 1.1em;
+    font-size: 18.75px;
 }
 
 .post > h5
 {
-    font-size: 1.05em;
+    font-size: 15px;
 }
 
 .post > h6
 {
-    font-size: 1em;
+    font-size: 12px;
 }
 
 .post > table
