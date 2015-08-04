@@ -168,30 +168,34 @@ button, input, textarea
     padding-left: 0.5em;
     border-left-style: solid;
     border-left-width: 0.25em;
+    font-weight: lighter;
 }
 
 .post > h3
 {
     font-size: 23.4375px;
-    font-weight: lighter;
+    color: #37d;
 }
 
 .post > h4
 {
     font-size: 18.75px;
     margin-left: 16px;
+    color: #293;
 }
 
 .post > h5
 {
     font-size: 15px;
     margin-left: 32px;
+    color: #b81;
 }
 
 .post > h6
 {
     font-size: 12px;
     margin-left: 48px;
+    color: #85b;
 }
 
 .post > table
