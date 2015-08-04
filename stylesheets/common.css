@@ -156,27 +156,42 @@ button, input, textarea
 
 .post > h2
 {
+    margin: 1.5em;
+    border-bottom: 2px solid;
     font-size: 29.296875px;
+    font-weight: lighter;
+    color: #e74c3c;
+}
+
+.post > h3, .post > h4, .post > h5, .post > h6
+{
+    padding-left: 0.5em;
+    border-left-style: solid;
+    border-left-size: 0.25em;
 }
 
 .post > h3
 {
     font-size: 23.4375px;
+    font-weight: lighter;
 }
 
 .post > h4
 {
     font-size: 18.75px;
+    margin-right: 16px;
 }
 
 .post > h5
 {
     font-size: 15px;
+    margin-right: 32px;
 }
 
 .post > h6
 {
     font-size: 12px;
+    margin-right: 48px;
 }
 
 .post > table
