@@ -129,6 +129,7 @@ button, input, textarea
 {
     box-sizing: border-box;
     padding: 0 24px 8px;
+    font-family: "Minion Pro", "Cambria", "Segoe UI Symbol", "SimSun", sans-serif;
     background-color: white;
     border-radius: 2px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
@@ -139,6 +140,11 @@ button, input, textarea
     margin: 0 -24px 24px;
     background-color: #2980b9;
     color: #fafafa;
+}
+
+.post > header > h1, .post > h2, .post > h3, .post > h4, .post > h5, .post > h6
+{
+    font-family: "Myriad Pro", "Segoe UI", "Segoe UI Symbol", "Source Han Sans", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
 }
 
 .post > header > h1
