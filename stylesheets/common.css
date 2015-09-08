@@ -201,7 +201,7 @@ button, input, textarea
 .post > table
 {
     border-collapse: collapse;
-    margin: auto;
+    margin: 1em auto;
 }
 
 .post > table > thead
