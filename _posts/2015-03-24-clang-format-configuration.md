@@ -2,7 +2,7 @@
 title: EFanZh’s Clang Format configuration
 ---
 
-This is my [Clang Format](http://clang.llvm.org/docs/ClangFormat.html) configuration for the [Clang Format](//packagecontrol.io/packages/Clang%20Format) plugin used in [Sublime Text](//www.sublimetext.com/).
+This is my [Clang Format](http://clang.llvm.org/docs/ClangFormat.html) configuration for the [Clang Format plugin](//packagecontrol.io/packages/Clang%20Format) used in [Sublime Text](//www.sublimetext.com/).
 
 {% highlight json %}
 {
