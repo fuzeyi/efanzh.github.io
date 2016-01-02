@@ -259,3 +259,9 @@ button, input, textarea
     font-size: 12px;
     text-align: center;
 }
+
+/* Temporary solution */
+.post > p > a > img
+{
+    max-width: 100%;
+}
