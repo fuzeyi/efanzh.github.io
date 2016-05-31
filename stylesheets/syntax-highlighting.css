@@ -1,4 +1,4 @@
-.highlight > pre, .post > pre
+pre.highlight
 {
     border: 1px solid #ccc;
     box-shadow: inset 1px 1px 3px #eee;

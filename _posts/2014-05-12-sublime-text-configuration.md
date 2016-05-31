@@ -2,7 +2,7 @@
 title: EFanZh’s Sublime Text configuration
 ---
 
-{% highlight json %}
+```json
 {
     "draw_white_space": "all",
     "font_options":
@@ -16,4 +16,4 @@ title: EFanZh’s Sublime Text configuration
     "translate_tabs_to_spaces": true,
     "word_wrap": false
 }
-{% endhighlight %}
+```

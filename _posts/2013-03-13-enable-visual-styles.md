@@ -6,7 +6,7 @@ Some old application doesn’t enable [visual styles](http://msdn.microsoft.com/
 
 First, write a manifest file:
 
-{% highlight xml %}
+```xml
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
   <dependency>
@@ -15,7 +15,7 @@ First, write a manifest file:
     </dependentAssembly>
   </dependency>
 </assembly>
-{% endhighlight %}
+```
 
 Assume the mainifest file is “app.exe.manifest” and the executable file is “app.exe”, you can use “[mt.exe](http://msdn.microsoft.com/library/aa375649.aspx)” to add the manifest file to the executable file:
 
