@@ -1,11 +1,3 @@
-pre.highlight
-{
-    border: 1px solid #ccc;
-    box-shadow: inset 1px 1px 3px #eee;
-    overflow: auto;
-    padding: 0.5em;
-}
-
 .highlight .bp /* Name.Builtin.Pseudo */
 {
     color: #999999;
