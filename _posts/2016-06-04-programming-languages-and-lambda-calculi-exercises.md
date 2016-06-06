@@ -2,6 +2,8 @@
 title: Programming Languages and Lambda Calculi exercises
 ---
 
+The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf).
+
 ## Part I: Models of Languages
 
 ### Chapter 1: Computing with Text
