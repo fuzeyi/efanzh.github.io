@@ -39,10 +39,10 @@ Which of the following are in *B*? For each member of *B*, provide a proof tree 
 
 #### 1.4 Directed Evaluation
 
-##### Exercise 1.2
-
 > - (`f` • *B*<sub>1</sub>) **r** *B*<sub>1</sub>
 > - (`t` • *B*<sub>1</sub>) **r** `t`
+
+##### Exercise 1.2
 
 ###### Question
 
@@ -53,3 +53,35 @@ Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showin
     (f • (f • (f • f))) r (f • (f • f))
                         r (f • f)
                         r f
+
+#### 1.5 Evaluation in Context
+
+> - *B*<sub>1</sub> **r** *B*<sub>2</sub> ⇒ *B*<sub>1</sub> →<sub>**r**</sub> *B*<sub>2</sub>
+> - *B*<sub>1</sub> →<sub>**r**</sub> *B*<sub>1</sub>′ ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub>′ • *B*<sub>2</sub>)
+> - *B*<sub>2</sub> →<sub>**r**</sub> *B*<sub>2</sub>′ ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub> • *B*<sub>2</sub>′)
+
+##### Exercise 1.3
+
+###### Question
+
+Explain why (`f` • ((`t` • `f`) • `f`)) !↝↝<sub>**r**</sub> `t`.
+
+###### Answer
+
+    (f • ((t • f) • f)) r ((t • f) • f)
+
+That’s all, we can’t reduce it any more because we can not apply either rule to ((`t` • `f`) • `f`)
+
+##### Exercise 1.4
+
+###### Question
+
+Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstrating a reduction with →<sub>**r**</sub>.
+
+                                                      (t • f) r t
+                                                    ----------------
+      (f • ((t • f) • f)) r ((t • f) • f)             (t • f) →r t            (t • f) r t
+    ----------------------------------------  ----------------------------  ----------------
+      (f • ((t • f) • f)) →r ((t • f) • f)      ((t • f) • f) →r (t • f)      (t • f) →r t
+    ----------------------------------------------------------------------------------------
+                           (f • ((t • f) • f)) →r ((t • f) • f) ↠r t
