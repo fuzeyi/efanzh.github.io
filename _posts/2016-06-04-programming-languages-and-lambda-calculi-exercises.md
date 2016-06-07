@@ -80,10 +80,12 @@ That’s all, we can’t reduce it any more because we can not apply either rule
 
 Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstrating a reduction with →<sub>**r**</sub>.
 
+###### Answer
+
                                                       (t • f) r t
                                                     ----------------
       (f • ((t • f) • f)) r ((t • f) • f)             (t • f) →r t            (t • f) r t
     ----------------------------------------  ----------------------------  ----------------
       (f • ((t • f) • f)) →r ((t • f) • f)      ((t • f) • f) →r (t • f)      (t • f) →r t
     ----------------------------------------------------------------------------------------
-                           (f • ((t • f) • f)) →r ((t • f) • f) ↠r t
+                                    (f • ((t • f) • f)) ↠r t
