@@ -52,13 +52,15 @@ Which of the following are in *B*? For each member of *B*, provide a proof tree 
 > - (`t` • *B*<sub>1</sub>) ≈<sub>**r**</sub> `t`
 > - *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>1</sub>
 > - *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>2</sub> ⇒ *B*<sub>2</sub> ≈<sub>**r**</sub> *B*<sub>1</sub>
-> - *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>2</sub> and *B*<sub>2</sub> ≈<sub>**r**</sub> *B*<sub>3</sub> ⇒ *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>3</sub>
+> - *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>2</sub> and *B*<sub>2</sub> ≈<sub>**r**</sub> *B*<sub>3</sub>
+>     ⇒ *B*<sub>1</sub> ≈<sub>**r**</sub> *B*<sub>3</sub>
 
 #### 1.4 Directed Evaluation
 
 > - *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>1</sub>
 > - *B*<sub>1</sub> **r** *B*<sub>2</sub> ⇒ *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>2</sub>
-> - *B*<sub>1</sub> **r** *B*<sub>2</sub> and *B*<sub>2</sub> **r** *B*<sub>3</sub> ⇒ *B*<sub>1</sub> **r** *B*<sub>3</sub>
+> - *B*<sub>1</sub> **r** *B*<sub>2</sub> and *B*<sub>2</sub> **r** *B*<sub>3</sub>
+>     ⇒ *B*<sub>1</sub> **r** *B*<sub>3</sub>
 
 ##### Exercise 1.2
 
@@ -75,8 +77,10 @@ Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showin
 #### 1.5 Evaluation in Context
 
 > - *B*<sub>1</sub> **r** *B*<sub>2</sub> ⇒ *B*<sub>1</sub> →<sub>**r**</sub> *B*<sub>2</sub>
-> - *B*<sub>1</sub> →<sub>**r**</sub> *B*<sub>1</sub>′ ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub>′ • *B*<sub>2</sub>)
-> - *B*<sub>2</sub> →<sub>**r**</sub> *B*<sub>2</sub>′ ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub> • *B*<sub>2</sub>′)
+> - *B*<sub>1</sub> →<sub>**r**</sub> *B*<sub>1</sub>′
+>     ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub>′ • *B*<sub>2</sub>)
+> - *B*<sub>2</sub> →<sub>**r**</sub> *B*<sub>2</sub>′
+>     ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub> • *B*<sub>2</sub>′)
 
 > - =<sub>**r**</sub> is the equivalence closure of →<sub>**r**</sub>.
 
@@ -154,3 +158,64 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 
     (t • B1) =r (t • B1)
     (t • B1) =r t
+
+### Chapter 2: Structural Induction
+
+#### 2.1 Detecting the Need for Structural Induction
+
+> - *P* = *α* \| (*β*⊗*P*) \| (*P*⊙*P*)
+
+> **Theorem 2.2**: For any *P*, *P* contains at least one *α*.
+
+##### Exercise 2.1
+
+###### Question
+
+Prove Theorem 2.2.
+
+###### Answer
+
+- Base case:
+    - **Case** *α*
+
+        *α* contains one *α*, the claim holds.
+
+- Inductive cases:
+    - **Case** (*β*⊗*P*)
+
+        By induction, *P* contains at least one *α*, therefore (*β*⊗*P*) contains at least one *α*, the claim holds.
+
+    - **Case** (*P*⊙*P*)
+
+        By induction, *P* contains at least one *α*, therefore (*P*⊗*P*) contains at least two *α*, the claim holds.
+
+#### 2.2 Definitions with Ellipses
+
+> - *W* = *α* \| (*β**W**W*…*W*)
+
+Or more precisely:
+
+> - *W* = *α* \| (*β**Y*)
+> - *Y* = *W* \| *Y**W*
+
+> **Theorem 2.4**: For any *W*, each *β* in *W* is preceded by an open parenthesis.
+
+##### Exercise 2.2
+
+###### Question
+
+Prove Theorem 2.4.
+
+###### Answer
+
+- Base case:
+    - **Case** *α*
+
+        *α* contains no *β*, the claim holds.
+
+- Inductive case:
+    - **Case** (*β**W**W*…*W*)
+
+        By induction, each *β* in *W* is preceded by an open parenthesis, therefore each *β* in the sequence of *W* is
+        preceded by an open parenthesis. Also, the other *β* outside of the sequence of *W* is preceded by an open
+        parenthesis, so that all the *β*s in this case is preceded by open parenthesises, the claim holds.
