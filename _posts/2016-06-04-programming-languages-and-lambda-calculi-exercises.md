@@ -82,7 +82,7 @@ Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showin
 > - *B*<sub>2</sub> →<sub>**r**</sub> *B*<sub>2</sub>′
 >     ⇒ (*B*<sub>1</sub> • *B*<sub>2</sub>) →<sub>**r**</sub> (*B*<sub>1</sub> • *B*<sub>2</sub>′)
 
-> - =<sub>**r**</sub> is the equivalence closure of →<sub>**r**</sub>.
+> =<sub>**r**</sub> is the equivalence closure of →<sub>**r**</sub>.
 
 ##### Exercise 1.3
 
