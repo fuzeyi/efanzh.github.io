@@ -13,3 +13,5 @@ defaults:
         type: "posts"
     values:
         layout: "page"
+gems:
+  - jekyll-sitemap
