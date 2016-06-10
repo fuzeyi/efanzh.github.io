@@ -332,8 +332,9 @@ Induction on *P* ⋄ *P*′:
 - Inductive cases:
     - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>)
 
-        △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), therefore △*P*<sub>1</sub> and △*P*<sub>2</sub>. By induction,
-        △*P*<sub>1</sub>′, therefore △(*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>), the claim holds.
+        △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), therefore △*P*<sub>1</sub> and △*P*<sub>2</sub>. Since
+        *P*<sub>1</sub> ⋄ *P*<sub>1</sub>′, by induction, △*P*<sub>1</sub>′, therefore
+        △(*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>), the claim holds.
 
     - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>′)
 
