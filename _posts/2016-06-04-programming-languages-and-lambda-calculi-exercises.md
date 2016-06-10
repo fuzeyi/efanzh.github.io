@@ -163,7 +163,7 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 
 #### 2.1 Detecting the Need for Structural Induction
 
-> - *P* = *α* \| (*β*⊗*P*) \| (*P*⊙*P*)
+> - *P* = *α* \| (*β* ⊗ *P*) \| (*P* ⊙ *P*)
 
 > **Theorem 2.2**: For any *P*, *P* contains at least one *α*.
 
@@ -181,13 +181,14 @@ Prove Theorem 2.2.
         *α* contains one *α*, the claim holds.
 
 - Inductive cases:
-    - **Case** (*β*⊗*P*)
+    - **Case** (*β* ⊗ *P*)
 
-        By induction, *P* contains at least one *α*, therefore (*β*⊗*P*) contains at least one *α*, the claim holds.
+        By induction, *P* contains at least one *α*, therefore (*β* ⊗ *P*) contains at least one *α*, the claim holds.
 
-    - **Case** (*P*⊙*P*)
+    - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>)
 
-        By induction, *P* contains at least one *α*, therefore (*P*⊗*P*) contains at least two *α*, the claim holds.
+        By induction, *P* contains at least one *α*, therefore (*P*<sub>1</sub> ⊗ *P*<sub>2</sub>) contains at least two
+        *α*s, the claim holds.
 
 #### 2.2 Definitions with Ellipses
 
@@ -214,8 +215,126 @@ Prove Theorem 2.4.
         *α* contains no *β*, the claim holds.
 
 - Inductive case:
-    - **Case** (*β**W**W*…*W*)
+    - **Case** (*β**W*<sub>0</sub>*W*<sub>1</sub>…*W*<sub>*n*</sub>)
 
         By induction, each *β* in *W* is preceded by an open parenthesis, therefore each *β* in the sequence of *W* is
         preceded by an open parenthesis. Also, the other *β* outside of the sequence of *W* is preceded by an open
         parenthesis, so that all the *β*s in this case is preceded by open parenthesises, the claim holds.
+
+#### 2.3 Induction on Proof Trees
+
+> - △*α* [always]
+> - △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) if △*P*<sub>1</sub> and △*P*<sub>2</sub>
+
+#### 2.4 Multiple Structures
+
+> **Theorem 2.6**: For all △*P*, *P* contains no *β*s.
+
+> **Theorem 2.7**: For all *P*, either 1) *P* contains a *β*, or 2) △*P*.
+
+##### Exercise 2.3
+
+###### Question
+
+Prove Theorem 2.7. The theorem must be proved over a different structure than Theorem 2.6.
+
+###### Answer
+
+Induction over the structure of *P*:
+
+- Base case:
+    - **Case** *α*
+
+        *α* does not contain a *β*, and △*α*, the claim holds.
+
+- Inductive cases:
+    - **Case** (*β* ⊗ *P*)
+
+        There’s a *β* in this case, according to Theorem 2.6, △*P* does not hold, so the claim holds.
+
+    - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>)
+
+         If at least one of *P*<sub>1</sub> and *P*<sub>2</sub> contains a *β*, at least one of △*P*<sub>1</sub> and
+         △*P*<sub>2</sub> does not hold, so △*P* does not hold. Also, in this case, *P* contains at least one *β*. The
+         claim holds.
+
+         If none of *P*<sub>1</sub> and *P*<sub>2</sub> contains a *β*, by induction, △*P*<sub>1</sub> and
+         △*P*<sub>1</sub>, so △*P*. Also, in this case, *P* does not contain a *β*, so the claim holds.
+
+#### 2.5 More Definitions and More Proofs
+
+> - ((*β* ⊗ *α*) ⊙ *α*) ⋄ (*β* ⊗ *α*)
+> - (*α* ⊙ (*β* ⊗ *α*)) ⋄ *α*
+> - (*α* ⊙ *α*) ⋄ *α*
+> - (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>) if *P*<sub>1</sub> ⋄ *P*<sub>1</sub>′
+> - (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>′) if *P*<sub>2</sub> ⋄ *P*<sub>2</sub>′
+
+> - *V* = *α* \| (*β* ⊗ *V*)
+
+> **Theorem 2.9**: Every *V* is in *P*.
+
+> **Theorem 2.10**: If △*P* and *P* is not a *V* , then *P* ⋄ *P*′ for some *P*′.
+
+> **Theorem 2.11**: If △*P* and *P* ⋄ *P*′, then △*P*′.
+
+##### Exercise 2.4
+
+###### Question
+
+Prove Theorem 2.9.
+
+###### Answer
+
+- Base case:
+    - **Case** *α*
+
+        *a* is in *P*, the claim holds.
+
+- Inductive cases:
+    - **Case** (*β* ⊗ *V*)
+
+        By induction, *V* is in *P*, so (*β* ⊗ *V*) is in *P*, the claim holds.
+
+##### Exercise 2.5
+
+###### Question
+
+Prove Theorem 2.10.
+
+###### Answer
+
+*TODO: I don’t understand this therom.*
+
+##### Exercise 2.6
+
+###### Question
+
+Prove Theorem 2.11. The proof can proceed in two different ways, since the implicit “for all” applies to both △*P* and
+*P* ⋄ *P*′.
+
+###### Answer
+
+Induction on *P* ⋄ *P*′:
+
+- Base cases:
+    - **Case** ((*β* ⊗ *α*) ⊙ *α*) ⋄ (*β* ⊗ *α*)
+
+        △((*β* ⊗ *α*) ⊙ *α*) does not hold, the claim holds.
+
+    - **Case** (*α* ⊙ (*β* ⊗ *α*)) ⋄ *α*
+
+        △(*α* ⊙ (*β* ⊗ *α*)) does not hold, the claim holds.
+
+    - **Case** (*α* ⊙ *α*) ⋄ *α*
+
+        △(*α* ⊙ *α*), and △*α*, the claim holds.
+
+- Inductive cases:
+    - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>)
+
+        △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), therefore △*P*<sub>1</sub> and △*P*<sub>2</sub>. By induction,
+        △*P*<sub>1</sub>′, therefore △(*P*<sub>1</sub>′ ⊙ *P*<sub>2</sub>), the claim holds.
+
+    - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>′)
+
+        Analogous to the previous case.
