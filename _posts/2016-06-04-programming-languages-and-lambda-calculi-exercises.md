@@ -187,8 +187,8 @@ Prove Theorem 2.2.
 
     - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>)
 
-        By induction, *P* contains at least one *α*, therefore (*P*<sub>1</sub> ⊗ *P*<sub>2</sub>) contains at least two
-        *α*s, the claim holds.
+        By induction, *P* contains at least one *α*, therefore (*P*<sub>1</sub> ⊗ *P*<sub>2</sub>) contains at least
+        two *α*s, the claim holds.
 
 #### 2.2 Definitions with Ellipses
 
@@ -303,7 +303,47 @@ Prove Theorem 2.10.
 
 ###### Answer
 
-*TODO: I don’t understand this therom.*
+First, we prove the following theorem:
+
+**Theorem**: If △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), then (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ *P*′ for some *P*′.
+
+**Proof**: By induction over the structure of (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>).
+
+Since △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), △*P*<sub>1</sub> and △*P*<sub>2</sub>.
+
+- **Base case**:
+    - **Case** (*α* ⊙ *α*)
+
+        (*α* ⊙ *α*) ⋄ *α*, the claim holds.
+
+- **Inductive cases**:
+    - **Case** ((*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⊙ *P*<sub>3</sub>)
+
+        By induction, (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ *P*′ for some *P*′, therefore
+        ((*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⊙ *P*<sub>3</sub>) ⋄ (*P*′ ⊙ *P*<sub>3</sub>), the claim holds.
+
+    - **Case** (*P*<sub>3</sub> ⊙ (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>))
+
+        Analogous to the previous case.
+
+Now we prove theorem 2.10.
+
+Induction over the structure of *P*:
+
+- Base case:
+    - **Case** *α*
+
+        Since *α* is a *V*, the claim holds.
+
+- Inductive cases:
+    - **Case** (*β* ⊗ *P*)
+
+        Since △(*β* ⊗ *P*) does not hold, the claim holds.
+
+    - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>)
+
+        (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) is not a *V*. If △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), by the theorem we
+        just proved, △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ *P*′ for some *P*′, the claim holds.
 
 ##### Exercise 2.6
 
@@ -314,7 +354,7 @@ Prove Theorem 2.11. The proof can proceed in two different ways, since the impli
 
 ###### Answer
 
-Induction on *P* ⋄ *P*′:
+Induction over the structure of *P* ⋄ *P*′:
 
 - Base cases:
     - **Case** ((*β* ⊗ *α*) ⊙ *α*) ⋄ (*β* ⊗ *α*)
@@ -339,3 +379,32 @@ Induction on *P* ⋄ *P*′:
     - **Case** (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>′)
 
         Analogous to the previous case.
+
+### Chapter 3: Consistency of Evaluation
+
+> **Theorem 3.3** [**Diamond Property for** ↠<sub>**r**</sub>]: If *L* ↠<sub>**r**</sub> *M* and
+> *L* ↠<sub>r</sub> *N*, then there exists an expression *L*′ such that *M* ↠<sub>**r**</sub> *L*′ and
+> *N* ↠<sub>**r**</sub> *L*′.
+
+> **Theorem 3.5**: For any *B*<sub>0</sub>, *eval*<sub>**r**</sub>(*B*<sub>0</sub>) = *R*<sub>0</sub> for some
+> *R*<sub>0</sub>.
+
+##### Exercise 3.1
+
+###### Question
+
+Prove Theorem 3.3 (formally, instead of using a diagram).
+
+###### Answer
+
+*TODO.*
+
+##### Exercise 3.2
+
+###### Question
+
+Prove Theorem 3.5.
+
+###### Answer
+
+*TODO.*
