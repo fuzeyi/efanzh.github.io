@@ -11,10 +11,10 @@ icon is from:
     %SystemRoot%\Installer\{AC76BA86-7AD7-1033-7B44-AC0F074E4100}\SC_Reader.ico
 
 After I navigate to the icon folder, I saw bunch of icon files of the same icon as the wrong Adobe Acrobat Reader DC
-icon. And the surprise thing is that the “SC_Reader.ico” file is not really an icon file! I think it’s a executable
+icon. And the surprise thing is that the “SC_Reader.ico” file is not really an icon file! I think it’s an executable
 file, because after I rename “SC_Reader.ico” to “SC_Reader.exe”, it’s icon become the icon of Adobe Acrobat Reader DC.
 Then I noticed that the wrong icon is actually my image viewer’s document icon. I think Adobe Acrobat Reader DC got the
-wrong icon from the wrong ico file. Then I changed the default application to open .ico file to Microsoft Paint, the
+wrong icon from the wrong .ico file. Then I changed the default application to open .ico file to Microsoft Paint, the
 wrong icon file’s icon become the executable’s icon, and Adobe Acrobat Reader DC’s start menu icon became normal.
 
 For those who don’t want to read: try to change your default application for .ico file to Microsoft Paint.
