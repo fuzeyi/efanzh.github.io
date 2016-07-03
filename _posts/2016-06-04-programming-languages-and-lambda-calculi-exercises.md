@@ -57,10 +57,12 @@ Which of the following are in *B*? For each member of *B*, provide a proof tree 
 
 #### 1.4 Directed Evaluation
 
+> ↝↝<sub>**r**</sub> is the reflexive–transitive closure of **r**:
+>
 > - *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>1</sub>
 > - *B*<sub>1</sub> **r** *B*<sub>2</sub> ⇒ *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>2</sub>
-> - *B*<sub>1</sub> **r** *B*<sub>2</sub> and *B*<sub>2</sub> **r** *B*<sub>3</sub>
->     ⇒ *B*<sub>1</sub> **r** *B*<sub>3</sub>
+> - *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>2</sub> and *B*<sub>2</sub> ↝↝<sub>**r**</sub> *B*<sub>3</sub>
+>     ⇒ *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>3</sub>
 
 ##### Exercise 1.2
 
