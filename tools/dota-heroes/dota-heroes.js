@@ -47,7 +47,7 @@
         layout();
 
         var xhr = new XMLHttpRequest();
-        xhr.open("GET", "hero_data_source_list.json", false);
+        xhr.open("GET", "hero-data-source-list.json", false);
         xhr.send();
         data_source_list = JSON.parse(xhr.responseText);
         for (var i in data_source_list)
