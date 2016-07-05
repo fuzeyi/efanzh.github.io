@@ -386,8 +386,11 @@ Induction over the structure of *P* ⋄ *P*′:
 
 ### Chapter 3: Consistency of Evaluation
 
+> **Theorem 3.2** [Church-Rosser for =<sub>**r**</sub>]: If *M* =<sub>**r**</sub> *N*, then there exists an expression
+> *L* such that *M* ↠<sub>**r**</sub> *L* and *N* ↠<sub>**r**</sub> *L*.
+
 > **Theorem 3.3** [**Diamond Property for** ↠<sub>**r**</sub>]: If *L* ↠<sub>**r**</sub> *M* and
-> *L* ↠<sub>r</sub> *N*, then there exists an expression *L*′ such that *M* ↠<sub>**r**</sub> *L*′ and
+> *L* ↠<sub>**r**</sub> *N*, then there exists an expression *L*′ such that *M* ↠<sub>**r**</sub> *L*′ and
 > *N* ↠<sub>**r**</sub> *L*′.
 
 > **Theorem 3.5**: For any *B*<sub>0</sub>, *eval*<sub>**r**</sub>(*B*<sub>0</sub>) = *R*<sub>0</sub> for some
@@ -401,7 +404,14 @@ Prove Theorem 3.3 (formally, instead of using a diagram).
 
 ###### Answer
 
-*TODO.*
+*L* ↠<sub>**r**</sub> *M* ⇒ *L* =<sub>**r**</sub> *M* ⇒ *M* =<sub>**r**</sub> *L*.
+
+*L* ↠<sub>**r**</sub> *N* ⇒ *L* =<sub>**r**</sub> *N*.
+
+*M* =<sub>**r**</sub> *L* and *L* =<sub>**r**</sub> *N* ⇒ *M* =<sub>**r**</sub> *N*.
+
+Because *M* =<sub>**r**</sub> *N*, by theorem 3.2, there exists an expression *L*′ such that *M* ↠<sub>**r**</sub> *L*′
+and *N* ↠<sub>**r**</sub> *L*′.
 
 ##### Exercise 3.2
 
@@ -411,4 +421,19 @@ Prove Theorem 3.5.
 
 ###### Answer
 
-*TODO.*
+- Base cases:
+    - **Case** `t`
+
+        `t` =<sub>**r**</sub> `t`, so that *eval*<sub>**r**</sub>(`t`) = `t`, the claim holds.
+
+    - **Case** `f`
+
+        `f` =<sub>**r**</sub> `f`, so that *eval*<sub>**r**</sub>(`f`) = `f`, the claim holds.
+
+- Inductive case:
+    - **Case** (*B*<sub>1</sub> • *B*<sub>2</sub>)
+
+        By induction, *eval*<sub>**r**</sub>(*B*<sub>1</sub>) = *R*<sub>1</sub> for some *R*<sub>1</sub>, and
+        *eval*<sub>**r**</sub>(*B*<sub>2</sub>) = *R*<sub>2</sub> for some *R*<sub>2</sub>.
+
+        *To be continued...*
