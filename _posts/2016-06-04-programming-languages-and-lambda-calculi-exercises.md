@@ -386,7 +386,7 @@ Induction over the structure of *P* ⋄ *P*′:
 
 ### Chapter 3: Consistency of Evaluation
 
-> **Theorem 3.2** [Church-Rosser for =<sub>**r**</sub>]: If *M* =<sub>**r**</sub> *N*, then there exists an expression
+> **Theorem 3.2** [**Church-Rosser for** =<sub>**r**</sub>]: If *M* =<sub>**r**</sub> *N*, then there exists an expression
 > *L* such that *M* ↠<sub>**r**</sub> *L* and *N* ↠<sub>**r**</sub> *L*.
 
 > **Theorem 3.3** [**Diamond Property for** ↠<sub>**r**</sub>]: If *L* ↠<sub>**r**</sub> *M* and
