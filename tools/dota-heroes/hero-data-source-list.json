@@ -1,6 +1,6 @@
 [
     {
-        "script": "hero_data.js",
+        "script": "hero-data.js",
         "media": "http://media.playdota.com/"
     },
     {
