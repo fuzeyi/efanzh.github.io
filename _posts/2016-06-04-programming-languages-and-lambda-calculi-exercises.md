@@ -196,12 +196,12 @@ Prove Theorem 2.2.
 
 #### 2.2 Definitions with Ellipses
 
-> - *W* = *α* \| (*β*​*W*​*W*…*W*)
+> - *W* = *α* \| (*βWW*…*W*)
 
 Or more precisely:
 
-> - *W* = *α* \| (*β*​*Y*)
-> - *Y* = *W* \| *Y*​*W*
+> - *W* = *α* \| (*βY*)
+> - *Y* = *W* \| *YW*
 
 > **Theorem 2.4**: For any *W*, each *β* in *W* is preceded by an open parenthesis.
 
@@ -219,7 +219,7 @@ Prove Theorem 2.4.
         *α* contains no *β*, the claim holds.
 
 - Inductive case:
-    - **Case** (*β*​*W*<sub>0</sub>*W*<sub>1</sub>…*W*<sub>*n*</sub>)
+    - **Case** (*βW*<sub>0</sub>*W*<sub>1</sub>…*W*<sub>*n*</sub>)
 
         By induction, each *β* in *W* is preceded by an open parenthesis, therefore each *β* in the sequence of *W* is
         preceded by an open parenthesis. Also, the other *β* outside of the sequence of *W* is preceded by an open
