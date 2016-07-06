@@ -421,19 +421,35 @@ Prove Theorem 3.5.
 
 ###### Answer
 
+First, we prove this theorem:
+
+**Theorem**: For any *B*<sub>0</sub>, *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>.
+
 - Base cases:
     - **Case** `t`
 
-        `t` =<sub>**r**</sub> `t`, so that *eval*<sub>**r**</sub>(`t`) = `t`, the claim holds.
+        `t` =<sub>**r**</sub> `t`, the claim holds.
 
     - **Case** `f`
 
-        `f` =<sub>**r**</sub> `f`, so that *eval*<sub>**r**</sub>(`f`) = `f`, the claim holds.
+        `f` =<sub>**r**</sub> `f`, the claim holds.
 
 - Inductive case:
     - **Case** (*B*<sub>1</sub> • *B*<sub>2</sub>)
 
-        By induction, *eval*<sub>**r**</sub>(*B*<sub>1</sub>) = *R*<sub>1</sub> for some *R*<sub>1</sub>, and
-        *eval*<sub>**r**</sub>(*B*<sub>2</sub>) = *R*<sub>2</sub> for some *R*<sub>2</sub>.
+        By induction, *B*<sub>1</sub> =<sub>**r**</sub> *R*<sub>1</sub> for some *R*<sub>1</sub>, and *B*<sub>2</sub>
+        =<sub>**r**</sub> *R*<sub>2</sub> for some *R*<sub>2</sub>. So that (*B*<sub>1</sub> • *B*<sub>2</sub>)
+        =<sub>**r**</sub> (*R*<sub>1</sub> • *B*<sub>2</sub>) =<sub>**r**</sub> (*R*<sub>1</sub> • *R*<sub>2</sub>) for
+        some *R*<sub>1</sub> and *R*<sub>2</sub>.
 
-        *To be continued...*
+        If *R*<sub>1</sub> = `t`, (*B*<sub>1</sub> • *B*<sub>2</sub>) =<sub>**r**</sub> (`t` • *R*<sub>2</sub>)
+        =<sub>**r**</sub> `t`, the claim holds.
+
+        Otherwise, *R*<sub>1</sub> = `f`, (*B*<sub>1</sub> • *B*<sub>2</sub>) =<sub>**r**</sub> (`f` • *R*<sub>2</sub>)
+        =*R*<sub>2</sub>, the claim holds.
+
+Now we prove Theorem 3.5:
+
+Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>, if *R*<sub>0</sub> = `t`,
+*eval*<sub>**r**</sub>(*B*<sub>0</sub>) = `t`, the claim holds; otherwise *R*<sub>0</sub> = `f`,
+*eval*<sub>**r**</sub>(*B*<sub>0</sub>) = `f`, the claim holds. So this theorem is proved.
