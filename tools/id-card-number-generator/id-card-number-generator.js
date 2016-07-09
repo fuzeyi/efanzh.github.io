@@ -52,7 +52,7 @@ function getParent(division, n)
 
 function parseADC(text)
 {
-    var lines = text.split("\r\n");
+    var lines = text.match(/[^\r\n]+/g);
     var depth = 6;
     var current = new Division("root", "0");
     for (var lineNum in lines)
