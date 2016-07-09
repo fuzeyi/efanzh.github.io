@@ -38,12 +38,12 @@
     background-color: #818076;
 }
 
-.keyboard .led_on
+.keyboard .led-on
 {
     color: #aff23c;
 }
 
-.keyboard .led_off
+.keyboard .led-off
 {
     color: black;
 }

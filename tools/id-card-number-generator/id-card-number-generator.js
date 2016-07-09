@@ -29,7 +29,7 @@ function window_onload()
             initialize();
         }
     };
-    xhr.open("GET", "administrative_division_codes.txt", true);
+    xhr.open("GET", "administrative-division-codes.txt", true);
     xhr.send(null);
 }
 
