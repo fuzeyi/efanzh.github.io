@@ -495,9 +495,9 @@ Prove the following equivalences by showing reductions.
 
 ###### Answer
 
-- **Case** (*λx*.*x*):
+- **Case** (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*):
     - (*λx*.*x*) →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y*)
-- **Case** (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*):
+- **Case** (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*):
     - (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) \\
         →<sub>**n**</sub><sup>*η*</sup> (*λy*.(*λz*.*z* *z*) *y*) (*λx*.*x* *x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
@@ -507,12 +507,12 @@ Prove the following equivalences by showing reductions.
         →<sub>**n**</sub><sup>*a*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
     - So that (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*)
         =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
-- **Case** *λy*.(*λx*.*λy*.*x*) (*y* *y*):
+- **Case** *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*):
     - *λy*.(*λx*.*λy*.*x*) (*y* *y*) \\
         →<sub>**n**</sub><sup>*a*</sup> *λa*.(*λx*.*λy*.*x*) (*a* *a*) \\
         →<sub>**n**</sub><sup>*β*</sup> *λa*.*λy*.(*a* *a*) \\
         →<sub>**n**</sub><sup>*a*</sup> *λa*.*λb*.(*a* *a*)
-- **Case** (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*):
+- **Case** (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*:
     - (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.(*λx*.*λy*.*x*) *x* (*g* *x*)) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.(*λy*.*x*) (*g* *x*)) (*λx*.*λy*.*x*) \\
