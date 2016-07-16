@@ -453,3 +453,68 @@ Now we prove Theorem 3.5:
 Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>, if *R*<sub>0</sub> = `t`,
 *eval*<sub>**r**</sub>(*B*<sub>0</sub>) = `t`, the claim holds; otherwise *R*<sub>0</sub> = `f`,
 *eval*<sub>**r**</sub>(*B*<sub>0</sub>) = `f`, the claim holds. So this theorem is proved.
+
+### Chapter 4: The *λ*-Calculus
+
+#### 4.2 *λ*-Calculus Grammar and Reductions
+
+##### Exercise 4.1
+
+###### Question
+
+Reduce the following expressions with →<sub>**n**</sub> until no more →<sub>**n**</sub><sup>*β*</sup> reductions are
+possible. Show all steps.
+
+- (*λx*.*x*)
+- (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*)
+- (*λx*.(*λy*.*y* *x*)) ((*λx*.*x* *x*) (*λx*.*x* *x*))
+
+###### Answer
+
+- (*λx*.*x*)
+- <u>(*λx*.(*λy*.*y* *x*)) (*λy*.*y*)</u> (*λx*.*x* *x*) \
+    →<sub>**n**</sub><sup>*β*</sup> <u>(*λy*.*y* (*λy*.*y*)) (*λx*.*x* *x*)</u> \
+    →<sub>**n**</sub><sup>*β*</sup> <u>(*λx*.*x* *x*) (*λy*.*y*)</u> \
+    →<sub>**n**</sub><sup>*β*</sup> <u>(*λy*.*y*) (*λy*.*y*)</u> \
+    →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y*)
+- <u>(*λx*.(*λy*.*y* *x*)) ((*λx*.*x* *x*) (*λx*.*x* *x*))</u> \
+    →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* <u>((*λx*.*x* *x*) (*λx*.*x* *x*))</u>) \
+    →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* <u>((*λx*.*x* *x*) (*λx*.*x* *x*))</u>) \
+    →<sub>**n**</sub><sup>*β*</sup> …
+
+##### Exercise 4.2
+
+###### Question
+
+Prove the following equivalences by showing reductions.
+
+- (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*)
+- (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
+- *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*)
+- (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*
+
+###### Answer
+
+- **Case** (*λx*.*x*):
+    - (*λx*.*x*) →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y*)
+- **Case** (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*):
+    - <u>(*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*)</u> (*λx*.*x* *x*) \
+        →<sub>**n**</sub><sup>*η*</sup> (*λy*.<u>(*λz*.*z* *z*) *y*</u>) (*λx*.*x* *x*) \
+        →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
+    - (*λa*.*a* <u>((*λg*.*g*) *a*)</u>) (*λb*.*b* *b*) \
+        →<sub>**n**</sub><sup>*β*</sup> <u>(*λa*.*a* *a*</u>)</u> (*λb*.*b* *b*) \
+        →<sub>**n**</sub><sup>*a*</sup> (*λy*.*y* *y*</u>) <u>(*λb*.*b* *b*)</u> \
+        →<sub>**n**</sub><sup>*a*</sup> (*λy*.*y* *y*</u>) (*λx*.*x* *x*)
+    - So that (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*)
+        =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
+- **Case** *λy*.(*λx*.*λy*.*x*) (*y* *y*):
+    - <u>*λy*.(*λx*.*λy*.*x*) (*y* *y*</u>) \
+        →<sub>**n**</sub><sup>*a*</sup> *λa*.<u>(*λx*.*λy*.*x*) (*a* *a*)</u> \
+        →<sub>**n**</sub><sup>*β*</sup> *λa*.<u>*λy*.(*a* *a*)</u> \
+        →<sub>**n**</sub><sup>*a*</sup> *λa*.*λb*.(*a* *a*)
+- **Case** (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*):
+    - <u>(*λf*.*λg*.*λx*.*f* *x* (*g* *x*))</u> (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) \
+        →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.<u>(*λx*.*λy*.*x*) *x*</u> (*g* *x*)) (*λx*.*λy*.*x*) \
+        →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.<u>(*λy*.*x*) (*g* *x*)</u>) (*λx*.*λy*.*x*) \
+        →<sub>**n**</sub><sup>*β*</sup> <u>(*λg*.*λx*.*x*) (*λx*.*λy*.*x*)</u> \
+        →<sub>**n**</sub><sup>*β*</sup> *λx*.*x*
