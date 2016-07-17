@@ -557,7 +557,7 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 > - `fst` (`mkpair` *M* *N*) =<sub>**n**</sub> *M*
 > - `snd` (`mkpair` *M* *N*) =<sub>**n**</sub> *N*
 
-> - 〈*M*, *N*〉 ≐ `λs`.`s` `M` `N`
+> - ⟨*M*, *N*⟩ ≐ `λs`.`s` `M` `N`
 > - `mkpair` ≐ *λx*.*λy*.*λs*.*s* *x* *y*
 > - `fst` ≐ *λp*.*p* `true`
 > - `snd` ≐ *λp*.*p* `false`
@@ -615,9 +615,9 @@ Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this
 
 > - `iszero` ≐ *λn*.*n* (*λx*.`false`) `true`
 
-> - `wrap` ≐ *λf*.*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉
+> - `wrap` ≐ *λf*.*λp*.⟨`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))⟩
 
-> - `sub1` ≐ *λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) 〈`true`, *x*〉)
+> - `sub1` ≐ *λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)
 
 ##### Exercise 4.6
 
@@ -659,16 +659,16 @@ Show that `sub1` 1 =<sub>**n**</sub> 0.
 ###### Answer
 
 `sub1` 1 \\
-= (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) 〈`true`, *x*〉)) (*λf*.*λx*.*f* *x*) \\
-→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λf*.*λx*.*f* *x*) (`wrap` *f*) 〈`true`, *x*〉) \\
-→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λx*.(`wrap` *f*) *x*) 〈`true`, *x*〉) \\
-→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((`wrap` *f*) 〈`true`, *x*〉) \\
-= *λf*.*λx*.`snd` (((*λf*.*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉) *f*) 〈`true`, *x*〉) \\
-→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉) 〈`true`, *x*〉) \\
-→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` (〈`false`, `if` (`fst` 〈`true`, *x*〉) (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉) \\
-↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, `if` `true` (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉 \\
-↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, (`snd` 〈`true`, *x*〉)〉 \\
-↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, *x*〉 \\
+= (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)) (*λf*.*λx*.*f* *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λf*.*λx*.*f* *x*) (`wrap` *f*) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λx*.(`wrap` *f*) *x*) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((`wrap` *f*) ⟨`true`, *x*⟩) \\
+= *λf*.*λx*.`snd` (((*λf*.*λp*.⟨`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))⟩) *f*) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λp*.⟨`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))⟩) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` (⟨`false`, `if` (`fst` ⟨`true`, *x*⟩) (`snd` ⟨`true`, *x*⟩) (*f* (`snd` ⟨`true`, *x*⟩))⟩) \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` ⟨`false`, `if` `true` (`snd` ⟨`true`, *x*⟩) (*f* (`snd` ⟨`true`, *x*⟩))⟩ \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` ⟨`false`, (`snd` ⟨`true`, *x*⟩)⟩ \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` ⟨`false`, *x*⟩ \\
 ↠<sub>**n**</sub> *λf*.*λx*.*x* \\
 = 0
 
