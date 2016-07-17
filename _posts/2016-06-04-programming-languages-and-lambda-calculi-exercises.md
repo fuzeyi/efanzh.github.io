@@ -695,6 +695,14 @@ when `iszero` is applied to `true`?
 
 Let’s try:
 
+`sub1` 0 \\
+= (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)) (*λf*.*λx*.*x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λf*.*λx*.*x*) (`wrap` *f*) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λx*.*x*) ⟨`true`, *x*⟩) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ⟨`true`, *x*⟩ \\
+↠<sub>**n**</sub> *λf*.*λx*.*x* \\
+= 0
+
 `iszero` `true` \\
 = (*λn*.*n* (*λx*.`false`)) (*λx*.*λy*.*x*) \\
 →<sub>**n**</sub><sup>*β*</sup> (*λx*.*λy*.*x*) (*λx*.`false`) \\
