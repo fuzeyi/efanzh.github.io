@@ -601,3 +601,103 @@ Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this
 = (*λx*.*λy*.*y*) *M* *N* \\
 →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y*) *N* \\
 →<sub>**n**</sub><sup>*β*</sup> *N*
+
+#### 4.5 Encoding Numbers
+
+> - 0 ≐ *λf*.*λx*.*x*
+> - 1 ≐ *λf*.*λx*.*f* *x*
+> - 2 ≐ *λf*.*λx*.*f* (*f* *x*)
+> - 3 ≐ *λf*.*λx*.*f* (*f* (*f* *x*))
+
+> - `add1` ≐ *λn*.*λf*.*λx*.*f* (*n* *f* *x*)
+
+> - `add` ≐ *λn*.*λm*.*m* `add1` *n*
+
+> - `iszero` ≐ *λn*.*n* (*λx*.`false`) `true`
+
+> - `wrap` ≐ *λf*.*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉
+
+> - `sub1` ≐ *λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) 〈`true`, *x*〉)
+
+##### Exercise 4.6
+
+###### Question
+
+Show that `add1` 1 =<sub>**n**</sub> 2.
+
+###### Answer
+
+`add1` 1 \\
+= (*λn*.*λf*.*λx*.*f* (*n* *f* *x*)) (*λf*.*λx*.*f* *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.*f* ((*λf*.*λx*.*f* *x*) *f* *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.*f* ((*λx*.*f* *x*) *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.*f* ((*λx*.*f* *x*) *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.*f* (*f* *x*) \\
+= 2
+
+##### Exercise 4.7
+
+###### Question
+
+Show that `iszero` 1 =<sub>**n**</sub> `false`.
+
+###### Answer
+
+`iszero` 1 \\
+= (*λn*.*n* (*λx*.`false`) `true`) (*λf*.*λx*.*f* *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λf*.*λx*.*f* *x*) (*λx*.`false`) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> (*λx*.(*λx*.`false`) *x*) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> (*λx*.`false`) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> `false`
+
+##### Exercise 4.8
+
+###### Question
+
+Show that `sub1` 1 =<sub>**n**</sub> 0.
+
+###### Answer
+
+`sub1` 1 \\
+= (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) 〈`true`, *x*〉)) (*λf*.*λx*.*f* *x*) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λf*.*λx*.*f* *x*) (`wrap` *f*) 〈`true`, *x*〉) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λx*.(`wrap` *f*) *x*) 〈`true`, *x*〉) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((`wrap` *f*) 〈`true`, *x*〉) \\
+= *λf*.*λx*.`snd` (((*λf*.*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉) *f*) 〈`true`, *x*〉) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉) 〈`true`, *x*〉) \\
+→<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` (〈`false`, `if` (`fst` 〈`true`, *x*〉) (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉) \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, `if` `true` (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉 \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, (`snd` 〈`true`, *x*〉)〉) \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, *x*)〉 \\
+↠<sub>**n**</sub> *λf*.*λx*.*x* \\
+= 0
+
+##### Exercise 4.9
+
+###### Question
+
+Define `mult` using the technique that allowed us to define `add`. In other words, implement (`mult` *n* *m*) as *n*
+additions of *m* to 0 by exploiting the fact that *n* itself applies a function *n* times. Hint: what kind of value is
+(`add` *m*)?
+
+###### Answer
+
+`mult` ≐ *λn*.*λm*.*m* *n*
+
+##### Exercise 4.10
+
+###### Question
+
+The *λ*-calculus provides no mechanism for signalling an error. What happens when `sub1` is applied to 0? What happens
+when `iszero` is applied to `true`?
+
+###### Answer
+
+Let’s try:
+
+`iszero` `true` \\
+= (*λn*.*n* (*λx*.`false`)) (*λx*.*λy*.*x*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λx*.*λy*.*x*) (*λx*.`false`) \\
+→<sub>**n**</sub><sup>*β*</sup> *λy*.*λx*.`false`
+
+I think that’s it.
