@@ -667,8 +667,8 @@ Show that `sub1` 1 =<sub>**n**</sub> 0.
 →<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` ((*λp*.〈`false`, `if` (`fst` *p*) (`snd` *p*) (*f* (`snd` *p*))〉) 〈`true`, *x*〉) \\
 →<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.`snd` (〈`false`, `if` (`fst` 〈`true`, *x*〉) (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉) \\
 ↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, `if` `true` (`snd` 〈`true`, *x*〉) (*f* (`snd` 〈`true`, *x*〉))〉 \\
-↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, (`snd` 〈`true`, *x*〉)〉) \\
-↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, *x*)〉 \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, (`snd` 〈`true`, *x*〉)〉 \\
+↠<sub>**n**</sub> *λf*.*λx*.`snd` 〈`false`, *x*〉 \\
 ↠<sub>**n**</sub> *λf*.*λx*.*x* \\
 = 0
 
