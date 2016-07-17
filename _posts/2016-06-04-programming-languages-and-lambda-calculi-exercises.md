@@ -550,6 +550,18 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 →<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*y*) \\
 = `false`
 
+#### 4.4 Encoding Pairs
+
+>  … In other words, we need functions `mkpair`, `fst`, and `snd` that obey the following equations:
+>
+> - `fst` (`mkpair` *M* *N*) =<sub>**n**</sub> *M*
+> - `snd` (`mkpair` *M* *N*) =<sub>**n**</sub> *N*
+
+> - 〈*M*, *N*〉 ≐ `λs`.`s` `M` `N`
+> - `mkpair` ≐ *λx*.*λy*.*λs*.*s* *x* *y*
+> - `fst` ≐ *λp*.*p* `true`
+> - `snd` ≐ *λp*.*p* `false`
+
 ##### Exercise 4.4
 
 ###### Question
@@ -561,3 +573,31 @@ that `and` `true` `false` =<sub>**n**</sub> `false`, etc.).
 
 - `and` ≐ *λx*.*λy* `if` *x* *y* `false`
 - `or` ≐ *λx*.*λy* `if` *x* `true` *y*
+
+#### 4.4 Encoding Pairs
+
+##### Exercise 4.5
+
+###### Question
+
+Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this section.
+
+`fst` (`mkpair` *M* *N*) \\
+= (*λp*.*p* `true`) ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) \\
+→<sub>**n**</sub><sup>*β*</sup> ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> ((*λy*.*λs*.*s* *M* *y*) *N*) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> (*λs*.*s* *M* *N*) `true` \\
+→<sub>**n**</sub><sup>*β*</sup> `true` *M* *N* \\
+= (*λx*.*λy*.*x*) *M* *N* \\
+→<sub>**n**</sub><sup>*β*</sup> (*λy*.*M*) *N* \\
+→<sub>**n**</sub><sup>*β*</sup> *M*
+
+`snd` (`mkpair` *M* *N*) \\
+= (*λp*.*p* `false`) ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) \\
+→<sub>**n**</sub><sup>*β*</sup> ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) `false` \\
+→<sub>**n**</sub><sup>*β*</sup> ((*λy*.*λs*.*s* *M* *y*) *N*) `false` \\
+→<sub>**n**</sub><sup>*β*</sup> (*λs*.*s* *M* *N*) `false` \\
+→<sub>**n**</sub><sup>*β*</sup> `false` *M* *N* \\
+= (*λx*.*λy*.*y*) *M* *N* \\
+→<sub>**n**</sub><sup>*β*</sup> (*λy*.*y*) *N* \\
+→<sub>**n**</sub><sup>*β*</sup> *N*
