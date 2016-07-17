@@ -557,7 +557,7 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 > - `fst` (`mkpair` *M* *N*) =<sub>**n**</sub> *M*
 > - `snd` (`mkpair` *M* *N*) =<sub>**n**</sub> *N*
 
-> - ⟨*M*, *N*⟩ ≐ `λs`.`s` `M` `N`
+> - ⟨*M*, *N*⟩ ≐ `λs`.`s` *M* *N*
 > - `mkpair` ≐ *λx*.*λy*.*λs*.*s* *x* *y*
 > - `fst` ≐ *λp*.*p* `true`
 > - `snd` ≐ *λp*.*p* `false`
