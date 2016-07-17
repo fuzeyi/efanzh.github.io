@@ -682,7 +682,7 @@ additions of *m* to 0 by exploiting the fact that *n* itself applies a function 
 
 ###### Answer
 
-`mult` ≐ *λn*.*λm*.*m* *n*
+`mult` ≐ *λn*.*λm*.*λf*.*m* (*n* f)
 
 ##### Exercise 4.10
 
