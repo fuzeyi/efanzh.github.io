@@ -27,6 +27,15 @@ button, input, textarea
 pre.highlight, .post blockquote
 {
     border: 1px solid #ccc;
+}
+
+pre.highlight
+{
+    padding: 0.5em;
+}
+
+.post blockquote
+{
     padding: 0 0.5em;
 }
 
