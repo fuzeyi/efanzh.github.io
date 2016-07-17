@@ -538,7 +538,7 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 →<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λx*.*λy*.*x*) *t* *f*) \\
 →<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λy*.*t*) *f*) \\
 →<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.*t*) \\
-→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*x*)
+→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*x*) \\
 = `true`
 
 (`if` `false`) \\
@@ -547,7 +547,7 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 →<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λy*.*y*) *f*) \\
 →<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.*f*) \\
 →<sub>**n**</sub><sup>*α*</sup> (*λx*.*λf*.*f*) \\
-→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*y*)
+→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*y*) \\
 = `false`
 
 ##### Exercise 4.4
