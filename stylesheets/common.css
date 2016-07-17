@@ -1,3 +1,8 @@
+code.highlighter-rouge
+{
+    color: #1896ab;
+}
+
 body
 {
     background-color: #ecf0f1;
@@ -22,7 +27,7 @@ button, input, textarea
 pre.highlight, .post blockquote
 {
     border: 1px solid #ccc;
-    padding: 0.5em;
+    padding: 0 0.5em;
 }
 
 pre.highlight
@@ -140,7 +145,7 @@ pre.highlight
 .post
 {
     box-sizing: border-box;
-    padding: 0 24px 8px;
+    padding: 0 48px 8px;
     font-family: "Minion Pro", "Times New Roman", "Cambria", "Segoe UI Symbol", "SimSun", sans-serif;
     background-color: white;
     border-radius: 2px;
@@ -154,9 +159,14 @@ pre.highlight
     margin: 1em 0;
 }
 
+.post ul
+{
+    padding-left: 2em;
+}
+
 .post > header
 {
-    margin: 0 -24px 24px;
+    margin: 0 -48px 24px;
     background-color: #2980b9;
     color: #fafafa;
 }
