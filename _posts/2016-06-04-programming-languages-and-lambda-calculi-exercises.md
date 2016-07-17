@@ -503,18 +503,61 @@ Prove the following equivalences by showing reductions.
         →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
     - (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λa*.*a* *a*) (*λb*.*b* *b*) \\
-        →<sub>**n**</sub><sup>*a*</sup> (*λy*.*y* *y*) (*λb*.*b* *b*) \\
-        →<sub>**n**</sub><sup>*a*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
+        →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y* *y*) (*λb*.*b* *b*) \\
+        →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y* *y*) (*λx*.*x* *x*)
     - So that (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*)
         =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
 - **Case** *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*):
     - *λy*.(*λx*.*λy*.*x*) (*y* *y*) \\
-        →<sub>**n**</sub><sup>*a*</sup> *λa*.(*λx*.*λy*.*x*) (*a* *a*) \\
+        →<sub>**n**</sub><sup>*α*</sup> *λa*.(*λx*.*λy*.*x*) (*a* *a*) \\
         →<sub>**n**</sub><sup>*β*</sup> *λa*.*λy*.(*a* *a*) \\
-        →<sub>**n**</sub><sup>*a*</sup> *λa*.*λb*.(*a* *a*)
+        →<sub>**n**</sub><sup>*α*</sup> *λa*.*λb*.(*a* *a*)
 - **Case** (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*:
     - (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.(*λx*.*λy*.*x*) *x* (*g* *x*)) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.(*λy*.*x*) (*g* *x*)) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> (*λg*.*λx*.*x*) (*λx*.*λy*.*x*) \\
         →<sub>**n**</sub><sup>*β*</sup> *λx*.*x*
+
+#### 4.3 Encoding Booleans
+
+> - `true` ≐ *λx*.*λy*.*x*
+> - `false` ≐ *λx*.*λy*.*y*
+> - `if` ≐ *λv*.*λt*.*λf*.*v* *t* *f*
+
+##### Exercise 4.3
+
+###### Question
+
+###### Answer
+
+Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**</sub> `false`.
+
+(`if` `true`) \\
+= ((*λv*.*λt*.*λf*.*v* *t* *f*) (*λx*.*λy*.*x*)) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λx*.*λy*.*x*) *t* *f*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λy*.*t*) *f*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.*t*) \\
+→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*x*)
+= `true`
+
+(`if` `false`) \\
+= ((*λv*.*λt*.*λf*.*v* *t* *f*) (*λx*.*λy*.*y*)) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λx*.*λy*.*y*) *t* *f*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.(*λy*.*y*) *f*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λt*.*λf*.*f*) \\
+→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λf*.*f*) \\
+→<sub>**n**</sub><sup>*α*</sup> (*λx*.*λy*.*y*)
+= `false`
+
+##### Exercise 4.4
+
+###### Question
+
+Define macros for binary `and` and `or` prefix operators that evaluate in the natural way with `true` and `false` (so
+that `and` `true` `false` =<sub>**n**</sub> `false`, etc.).
+
+###### Answer
+
+- `and` ≐ *λx*.*λy* `if` *x* *y* `false`
+- `or` ≐ *λx*.*λy* `if` *x* `true` *y*
