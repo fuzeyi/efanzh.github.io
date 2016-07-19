@@ -646,11 +646,13 @@ The claim holds.
 > - (`cdr` (`cons` *M* *N*)) =<sub>**n**</sub> *N*
 >
 > - Your encoding need not assign any particular meaning to expressions such as (`car` `null`) or (`car` `cons`).
+{: exercise}
 
 *TODO.*
 
 > **Exercise 4.14.** Using your encoding from the previous exercise, define `length`, which takes a list of booleans and
 > returns the number of cons cells in the list. A list of booleans is either `null`, or (`cons` *b* *l*) where *b* is
 > `true` or `false` and *l* is a list of booleans.
+{: exercise}
 
 *TODO.*
