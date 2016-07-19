@@ -611,3 +611,46 @@ I think that’s it.
 {: exercise}
 
 `mksum` ≐ *λt*.*λn* `if` (`iszero` *n*) 0 (`add` ((*t* *t*) (`sub1` *n*)) *n*)
+
+##### 4.6.3 Fixed Points and the `Y` Combinator
+
+> `Y` ≐ *λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))
+
+> **Exercise 4.12.** Prove that *M* (`Y` *M*) =<sub>**n**</sub> (`Y` *M*) for any *M*.
+{: exercise}
+
+(`Y` *M*) \
+= ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*) \
+→<sub>**n**</sub><sup>*β*</sup> (*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*)) \
+→<sub>**n**</sub><sup>*β*</sup> (*M* ((*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*))))
+
+*M* (`Y` *M*) \
+= *M* ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*)
+→<sub>**n**</sub><sup>*β*</sup> (*M* ((*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*))))
+
+The claim holds.
+
+> **Exercise 4.13.** Define an encoding for Lisp cons cells, consisting of the following macros:
+>
+> - `null`, a constant
+> - `cons`, a function that takes two arguments and returns a cons cell
+> - `isnull`, a function that returns `true` if its argument is `null`, `false` if it is a cons cell
+> - `car`, a function that takes a cons cell and returns its first element
+> - `cdr`, a function that takes a cons cell and returns its second element
+>
+> In particular, your encoding must satisfy the following equations:
+>
+> - (`isnull` `null`) =<sub>**n**</sub> `true`
+> - (`isnull` (`cons` *M* *N*)) =<sub>**n**</sub> `false`
+> - (`car` (`cons` *M* *N*)) =<sub>**n**</sub> *M*
+> - (`cdr` (`cons` *M* *N*)) =<sub>**n**</sub> *N*
+>
+> - Your encoding need not assign any particular meaning to expressions such as (`car` `null`) or (`car` `cons`).
+
+*TODO.*
+
+> **Exercise 4.14.** Using your encoding from the previous exercise, define `length`, which takes a list of booleans and
+> returns the number of cons cells in the list. A list of booleans is either `null`, or (`cons` *b* *l*) where *b* is
+> `true` or `false` and *l* is a list of booleans.
+
+*TODO.*
