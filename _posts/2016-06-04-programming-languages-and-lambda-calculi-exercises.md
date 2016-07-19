@@ -662,3 +662,5 @@ The claim holds.
 `length` ≐ `Y` (*λf*.*λM*.`if` (`isnull` *M*) 0 (`add1` (*f* (`cdr` *M*))))
 
 *Why does the question say “a list of booleans”? I think `length` can be applied to a list of anything.*
+
+> **Exercise 4.15.** Prove that ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no normal form.
