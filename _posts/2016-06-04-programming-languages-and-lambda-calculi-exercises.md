@@ -661,4 +661,4 @@ The claim holds.
 
 `length` ≐ `Y` (*λf*.*λM*.`if` (`isnull` *M*) 0 (`add1` (*f* (`cdr` *M*))))
 
-*Why the question say “a list of booleans”? I think `length` can be applied to a list of anything.*
+*Why does the question say “a list of booleans”? I think `length` can be applied to a list of anything.*
