@@ -2,6 +2,8 @@
 title: Programming Languages and Lambda Calculi exercises
 ---
 
+{:exercise: style="background-color: rgba(39, 116, 169, 0.15);"}
+
 The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/cs7520/public_html/s06/notes.pdf).
 
 ## Part I: Models of Languages
@@ -21,6 +23,7 @@ The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/c
 > 2. •
 > 3. ((`f` • `t`) • (`f` • `f`))
 > 4. ((`f`) • (`t`))
+{: exercise}
 
 `t` is in *B*:
 
@@ -61,6 +64,7 @@ The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/c
 
 > **Exercise 1.2.** Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showing its reduction with the `r`
 > one-step relation.
+{: exercise}
 
     (f • (f • (f • f))) r (f • (f • f))
                         r (f • f)
@@ -79,6 +83,7 @@ The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/c
 > =<sub>**r**</sub> is the equivalence closure of →<sub>**r**</sub>.
 
 > **Exercise 1.3.** Explain why (`f` • ((`t` • `f`) • `f`)) !↝↝<sub>**r**</sub> `t`.
+{: exercise}
 
     (f • ((t • f) • f)) r ((t • f) • f)
 
@@ -86,6 +91,7 @@ That’s all, we can’t reduce it any more because we can not apply either rule
 
 > **Exercise 1.4.** Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstrating a reduction with
 > →<sub>**r**</sub>.
+{: exercise}
 
                                                       (t • f) r t
                                                     ----------------
@@ -103,6 +109,7 @@ That’s all, we can’t reduce it any more because we can not apply either rule
 > **Exercise 1.5.** Among the relations **r**, ≍<sub>**r**</sub>, ≈<sub>**r**</sub>, ↝↝<sub>**r**</sub>,
 > →<sub>**r**</sub>, ↠<sub>**r**</sub>, =<sub>**r**</sub>, and *eval*<sub>**r**</sub>, which are functions? For each
 > non-function relation, find an expression and two expressions that it relates to.
+{: exercise}
 
 Relation **r** and *eval*<sub>**r**</sub> are functions.
 
@@ -145,6 +152,7 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 > **Theorem 2.2**: For any *P*, *P* contains at least one *α*.
 
 > **Exercise 2.1.** Prove Theorem 2.2.
+{: exercise}
 
 - Base case:
     - **Case** *α*
@@ -173,6 +181,7 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 > **Theorem 2.4**: For any *W*, each *β* in *W* is preceded by an open parenthesis.
 
 > **Exercise 2.2.** Prove Theorem 2.4.
+{: exercise}
 
 - Base case:
     - **Case** *α*
@@ -198,6 +207,7 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 > **Theorem 2.7**: For all *P*, either 1) *P* contains a *β*, or 2) △*P*.
 
 > **Exercise 2.3.** Prove Theorem 2.7. The theorem must be proved over a different structure than Theorem 2.6.
+{: exercise}
 
 Induction over the structure of *P*:
 
@@ -237,6 +247,7 @@ Induction over the structure of *P*:
 > **Theorem 2.11**: If △*P* and *P* ⋄ *P*′, then △*P*′.
 
 > **Exercise 2.4.** Prove Theorem 2.9.
+{: exercise}
 
 - Base case:
     - **Case** *α*
@@ -249,6 +260,7 @@ Induction over the structure of *P*:
         By induction, *V* is in *P*, so (*β* ⊗ *V*) is in *P*, the claim holds.
 
 > **Exercise 2.5.** Prove Theorem 2.10.
+{: exercise}
 
 First, we prove the following theorem:
 
@@ -294,6 +306,7 @@ Induction over the structure of *P*:
 
 > **Exercise 2.6.** Prove Theorem 2.11. The proof can proceed in two different ways, since the implicit “for all”
 > applies to both △*P* and *P* ⋄ *P*′.
+{: exercise}
 
 Induction over the structure of *P* ⋄ *P*′:
 
@@ -334,6 +347,7 @@ Induction over the structure of *P* ⋄ *P*′:
 > *R*<sub>0</sub>.
 
 > **Exercise 3.1.** Prove Theorem 3.3 (formally, instead of using a diagram).
+{: exercise}
 
 *L* ↠<sub>**r**</sub> *M* ⇒ *L* =<sub>**r**</sub> *M* ⇒ *M* =<sub>**r**</sub> *L*.
 
@@ -345,6 +359,7 @@ Because *M* =<sub>**r**</sub> *N*, by theorem 3.2, there exists an expression *L
 and *N* ↠<sub>**r**</sub> *L*′.
 
 > **Exercise 3.2.** Prove Theorem 3.5.
+{: exercise}
 
 First, we prove this theorem:
 
@@ -389,6 +404,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > - (*λx*.*x*)
 > - (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*)
 > - (*λx*.(*λy*.*y* *x*)) ((*λx*.*x* *x*) (*λx*.*x* *x*))
+{: exercise}
 
 - (*λx*.*x*)
 - (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*) \\
@@ -407,6 +423,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > - (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
 > - *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*)
 > - (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*
+{: exercise}
 
 - **Case** (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*):
     - (*λx*.*x*) →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y*)
@@ -439,6 +456,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > - `if` ≐ *λv*.*λt*.*λf*.*v* *t* *f*
 
 > **Exercise 4.3.** Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**</sub> `false`.
+{: exercise}
 
 (`if` `true`) \\
 = ((*λv*.*λt*.*λf*.*v* *t* *f*) (*λx*.*λy*.*x*)) \\
@@ -471,6 +489,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 
 > **Exercise 4.4.** Define macros for binary `and` and `or` prefix operators that evaluate in the natural way with
 > `true` and `false` (so that `and` `true` `false` =<sub>**n**</sub> `false`, etc.).
+{: exercise}
 
 - `and` ≐ *λx*.*λy* `if` *x* *y* `false`
 - `or` ≐ *λx*.*λy* `if` *x* `true` *y*
@@ -478,6 +497,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 #### 4.4 Encoding Pairs
 
 > **Exercise 4.5.** Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this section.
+{: exercise}
 
 `fst` (`mkpair` *M* *N*) \\
 = (*λp*.*p* `true`) ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) \\
@@ -517,6 +537,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > - `sub1` ≐ *λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)
 
 > **Exercise 4.6.** Show that `add1` 1 =<sub>**n**</sub> 2.
+{: exercise}
 
 `add1` 1 \\
 = (*λn*.*λf*.*λx*.*f* (*n* *f* *x*)) (*λf*.*λx*.*f* *x*) \\
@@ -527,6 +548,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 = 2
 
 > **Exercise 4.7.** Show that `iszero` 1 =<sub>**n**</sub> `false`.
+{: exercise}
 
 `iszero` 1 \\
 = (*λn*.*n* (*λx*.`false`) `true`) (*λf*.*λx*.*f* *x*) \\
@@ -536,6 +558,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 →<sub>**n**</sub><sup>*β*</sup> `false`
 
 > **Exercise 4.8.** Show that `sub1` 1 =<sub>**n**</sub> 0.
+{: exercise}
 
 `sub1` 1 \\
 = (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)) (*λf*.*λx*.*f* *x*) \\
@@ -554,11 +577,13 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > **Exercise 4.9.** Define `mult` using the technique that allowed us to define `add`. In other words, implement (`mult`
 > *n* *m*) as *n* additions of *m* to 0 by exploiting the fact that *n* itself applies a function *n* times. Hint: what
 > kind of value is (`add` *m*)?
+{: exercise}
 
 `mult` ≐ *λn*.*λm*.*λf*.*m* (*n* *f*)
 
 > **Exercise 4.10.** The *λ*-calculus provides no mechanism for signalling an error. What happens when `sub1` is applied
 > to 0? What happens when `iszero` is applied to `true`?
+{: exercise}
 
 Let’s try:
 
@@ -583,5 +608,6 @@ I think that’s it.
 
 > **Exercise 4.11.** Define a macro `mksum` such that (`mksum` `mksum`) acts like a “sum” function by consuming a number
 > *n* and adding all the numbers from 0 to *n*.
+{: exercise}
 
 `mksum` ≐ *λt*.*λn* `if` (`iszero` *n*) 0 (`add` ((*t* *t*) (`sub1` *n*)) *n*)
