@@ -648,11 +648,17 @@ The claim holds.
 > Your encoding need not assign any particular meaning to expressions such as (`car` `null`) or (`car` `cons`).
 {: exercise}
 
-*TODO.*
+- `null` ≐ ⟨`true`, `false`⟩
+- `cons` ≐ *λM*.*λN* ⟨`false`, ⟨*M*, *N*⟩⟩
+- `isnull` ≐ *λM*.`fst` *M*
+- `car` ≐ *λM*.`fst` (`snd` *M*)
+- `cdr` ≐ *λM*.`snd` (`snd` *M*)
 
 > **Exercise 4.14.** Using your encoding from the previous exercise, define `length`, which takes a list of booleans and
 > returns the number of cons cells in the list. A list of booleans is either `null`, or (`cons` *b* *l*) where *b* is
 > `true` or `false` and *l* is a list of booleans.
 {: exercise}
 
-*TODO.*
+`length` ≐ `Y` (*λf*.*λM*.`if` (`isnull` *M*) 0 (`add1` (*f* (`cdr` *M*))))
+
+*Why the question say “a list of booleans”? I think `length` can be applied to a list of anything.*
