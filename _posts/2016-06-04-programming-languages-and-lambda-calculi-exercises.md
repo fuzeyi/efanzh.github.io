@@ -645,7 +645,7 @@ The claim holds.
 > - (`car` (`cons` *M* *N*)) =<sub>**n**</sub> *M*
 > - (`cdr` (`cons` *M* *N*)) =<sub>**n**</sub> *N*
 >
-> - Your encoding need not assign any particular meaning to expressions such as (`car` `null`) or (`car` `cons`).
+> Your encoding need not assign any particular meaning to expressions such as (`car` `null`) or (`car` `cons`).
 {: exercise}
 
 *TODO.*
