@@ -14,18 +14,13 @@ The manuscript can be found [here](http://www.cs.utah.edu/~mflatt/past-courses/c
 > - `f` ∈ *B*
 > - (*B*<sub>1</sub> • *B*<sub>2</sub>) ∈ *B*
 
-##### Exercise 1.1
-
-###### Question
-
-Which of the following are in *B*? For each member of *B*, provide a proof tree showing that it must be in *B*.
-
-1. `t`
-2. •
-3. ((`f` • `t`) • (`f` • `f`))
-4. ((`f`) • (`t`))
-
-###### Answer
+> **Exercise 1.1.** Which of the following are in *B*? For each member of *B*, provide a proof tree showing that it must
+> be in *B*.
+>
+> 1. `t`
+> 2. •
+> 3. ((`f` • `t`) • (`f` • `f`))
+> 4. ((`f`) • (`t`))
 
 `t` is in *B*:
 
@@ -64,13 +59,8 @@ Which of the following are in *B*? For each member of *B*, provide a proof tree 
 > - *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>2</sub> and *B*<sub>2</sub> ↝↝<sub>**r**</sub> *B*<sub>3</sub>
 >     ⇒ *B*<sub>1</sub> ↝↝<sub>**r**</sub> *B*<sub>3</sub>
 
-##### Exercise 1.2
-
-###### Question
-
-Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showing its reduction with the `r` one-step relation.
-
-###### Answer
+> **Exercise 1.2.** Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showing its reduction with the `r`
+> one-step relation.
 
     (f • (f • (f • f))) r (f • (f • f))
                         r (f • f)
@@ -88,25 +78,14 @@ Show that (`f` • (`f` • (`f` • `f`))) ↝↝<sub>**r**</sub> `f` by showin
 
 > =<sub>**r**</sub> is the equivalence closure of →<sub>**r**</sub>.
 
-##### Exercise 1.3
-
-###### Question
-
-Explain why (`f` • ((`t` • `f`) • `f`)) !↝↝<sub>**r**</sub> `t`.
-
-###### Answer
+> **Exercise 1.3.** Explain why (`f` • ((`t` • `f`) • `f`)) !↝↝<sub>**r**</sub> `t`.
 
     (f • ((t • f) • f)) r ((t • f) • f)
 
 That’s all, we can’t reduce it any more because we can not apply either rule to ((`t` • `f`) • `f`).
 
-##### Exercise 1.4
-
-###### Question
-
-Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstrating a reduction with →<sub>**r**</sub>.
-
-###### Answer
+> **Exercise 1.4.** Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstrating a reduction with
+> →<sub>**r**</sub>.
 
                                                       (t • f) r t
                                                     ----------------
@@ -121,15 +100,9 @@ Show that (`f` • ((`t` • `f`) • `f`)) ↠<sub>**r**</sub> `t` by demonstra
 > - *eval*<sub>**r**</sub>(*B*) = `f` if *B* =<sub>**r**</sub> `f`
 > - *eval*<sub>**r**</sub>(*B*) = `t` if *B* =<sub>**r**</sub> `t`
 
-##### Exercise 1.5
-
-###### Question
-
-Among the relations **r**, ≍<sub>**r**</sub>, ≈<sub>**r**</sub>, ↝↝<sub>**r**</sub>, →<sub>**r**</sub>,
-↠<sub>**r**</sub>, =<sub>**r**</sub>, and *eval*<sub>**r**</sub>, which are functions? For each non-function relation,
-find an expression and two expressions that it relates to.
-
-###### Answer
+> **Exercise 1.5.** Among the relations **r**, ≍<sub>**r**</sub>, ≈<sub>**r**</sub>, ↝↝<sub>**r**</sub>,
+> →<sub>**r**</sub>, ↠<sub>**r**</sub>, =<sub>**r**</sub>, and *eval*<sub>**r**</sub>, which are functions? For each
+> non-function relation, find an expression and two expressions that it relates to.
 
 Relation **r** and *eval*<sub>**r**</sub> are functions.
 
@@ -171,13 +144,7 @@ Relation **r** and *eval*<sub>**r**</sub> are functions.
 
 > **Theorem 2.2**: For any *P*, *P* contains at least one *α*.
 
-##### Exercise 2.1
-
-###### Question
-
-Prove Theorem 2.2.
-
-###### Answer
+> **Exercise 2.1.** Prove Theorem 2.2.
 
 - Base case:
     - **Case** *α*
@@ -197,21 +164,15 @@ Prove Theorem 2.2.
 #### 2.2 Definitions with Ellipses
 
 > - *W* = *α* \| (*βWW*…*W*)
-
-Or more precisely:
-
+>
+> … Or more precisely:
+>
 > - *W* = *α* \| (*βY*)
 > - *Y* = *W* \| *YW*
 
 > **Theorem 2.4**: For any *W*, each *β* in *W* is preceded by an open parenthesis.
 
-##### Exercise 2.2
-
-###### Question
-
-Prove Theorem 2.4.
-
-###### Answer
+> **Exercise 2.2.** Prove Theorem 2.4.
 
 - Base case:
     - **Case** *α*
@@ -236,13 +197,7 @@ Prove Theorem 2.4.
 
 > **Theorem 2.7**: For all *P*, either 1) *P* contains a *β*, or 2) △*P*.
 
-##### Exercise 2.3
-
-###### Question
-
-Prove Theorem 2.7. The theorem must be proved over a different structure than Theorem 2.6.
-
-###### Answer
+> **Exercise 2.3.** Prove Theorem 2.7. The theorem must be proved over a different structure than Theorem 2.6.
 
 Induction over the structure of *P*:
 
@@ -281,13 +236,7 @@ Induction over the structure of *P*:
 
 > **Theorem 2.11**: If △*P* and *P* ⋄ *P*′, then △*P*′.
 
-##### Exercise 2.4
-
-###### Question
-
-Prove Theorem 2.9.
-
-###### Answer
+> **Exercise 2.4.** Prove Theorem 2.9.
 
 - Base case:
     - **Case** *α*
@@ -299,13 +248,7 @@ Prove Theorem 2.9.
 
         By induction, *V* is in *P*, so (*β* ⊗ *V*) is in *P*, the claim holds.
 
-##### Exercise 2.5
-
-###### Question
-
-Prove Theorem 2.10.
-
-###### Answer
+> **Exercise 2.5.** Prove Theorem 2.10.
 
 First, we prove the following theorem:
 
@@ -349,14 +292,8 @@ Induction over the structure of *P*:
         (*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) is not a *V*. If △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>), by the theorem we
         just proved, △(*P*<sub>1</sub> ⊙ *P*<sub>2</sub>) ⋄ *P*′ for some *P*′, the claim holds.
 
-##### Exercise 2.6
-
-###### Question
-
-Prove Theorem 2.11. The proof can proceed in two different ways, since the implicit “for all” applies to both △*P* and
-*P* ⋄ *P*′.
-
-###### Answer
+> **Exercise 2.6.** Prove Theorem 2.11. The proof can proceed in two different ways, since the implicit “for all”
+> applies to both △*P* and *P* ⋄ *P*′.
 
 Induction over the structure of *P* ⋄ *P*′:
 
@@ -396,13 +333,7 @@ Induction over the structure of *P* ⋄ *P*′:
 > **Theorem 3.5**: For any *B*<sub>0</sub>, *eval*<sub>**r**</sub>(*B*<sub>0</sub>) = *R*<sub>0</sub> for some
 > *R*<sub>0</sub>.
 
-##### Exercise 3.1
-
-###### Question
-
-Prove Theorem 3.3 (formally, instead of using a diagram).
-
-###### Answer
+> **Exercise 3.1.** Prove Theorem 3.3 (formally, instead of using a diagram).
 
 *L* ↠<sub>**r**</sub> *M* ⇒ *L* =<sub>**r**</sub> *M* ⇒ *M* =<sub>**r**</sub> *L*.
 
@@ -413,13 +344,7 @@ Prove Theorem 3.3 (formally, instead of using a diagram).
 Because *M* =<sub>**r**</sub> *N*, by theorem 3.2, there exists an expression *L*′ such that *M* ↠<sub>**r**</sub> *L*′
 and *N* ↠<sub>**r**</sub> *L*′.
 
-##### Exercise 3.2
-
-###### Question
-
-Prove Theorem 3.5.
-
-###### Answer
+> **Exercise 3.2.** Prove Theorem 3.5.
 
 First, we prove this theorem:
 
@@ -458,18 +383,12 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 
 #### 4.2 *λ*-Calculus Grammar and Reductions
 
-##### Exercise 4.1
-
-###### Question
-
-Reduce the following expressions with →<sub>**n**</sub> until no more →<sub>**n**</sub><sup>*β*</sup> reductions are
-possible. Show all steps.
-
-- (*λx*.*x*)
-- (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*)
-- (*λx*.(*λy*.*y* *x*)) ((*λx*.*x* *x*) (*λx*.*x* *x*))
-
-###### Answer
+> **Exercise 4.1.** Reduce the following expressions with →<sub>**n**</sub> until no more
+> →<sub>**n**</sub><sup>*β*</sup> reductions are possible. Show all steps.
+>
+> - (*λx*.*x*)
+> - (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*)
+> - (*λx*.(*λy*.*y* *x*)) ((*λx*.*x* *x*) (*λx*.*x* *x*))
 
 - (*λx*.*x*)
 - (*λx*.(*λy*.*y* *x*)) (*λy*.*y*) (*λx*.*x* *x*) \\
@@ -482,18 +401,12 @@ possible. Show all steps.
     →<sub>**n**</sub><sup>*β*</sup> (*λy*.*y* ((*λx*.*x* *x*) (*λx*.*x* *x*))) \\
     →<sub>**n**</sub><sup>*β*</sup> …
 
-##### Exercise 4.2
-
-###### Question
-
-Prove the following equivalences by showing reductions.
-
-- (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*)
-- (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
-- *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*)
-- (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*
-
-###### Answer
+> **Exercise 4.2.** Prove the following equivalences by showing reductions.
+>
+> - (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*)
+> - (*λx*.(*λy*.(*λz*.*z* *z*) *y*) *x*) (*λx*.*x* *x*) =<sub>**n**</sub> (*λa*.*a* ((*λg*.*g*) *a*)) (*λb*.*b* *b*)
+> - *λy*.(*λx*.*λy*.*x*) (*y* *y*) =<sub>**n**</sub> *λa*.*λb*.(*a* *a*)
+> - (*λf*.*λg*.*λx*.*f* *x* (*g* *x*)) (*λx*.*λy*.*x*) (*λx*.*λy*.*x*) =<sub>**n**</sub> *λx*.*x*
 
 - **Case** (*λx*.*x*) =<sub>**n**</sub> (*λy*.*y*):
     - (*λx*.*x*) →<sub>**n**</sub><sup>*α*</sup> (*λy*.*y*)
@@ -525,13 +438,7 @@ Prove the following equivalences by showing reductions.
 > - `false` ≐ *λx*.*λy*.*y*
 > - `if` ≐ *λv*.*λt*.*λf*.*v* *t* *f*
 
-##### Exercise 4.3
-
-###### Question
-
-###### Answer
-
-Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**</sub> `false`.
+> **Exercise 4.3.** Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**</sub> `false`.
 
 (`if` `true`) \\
 = ((*λv*.*λt*.*λf*.*v* *t* *f*) (*λx*.*λy*.*x*)) \\
@@ -562,25 +469,15 @@ Show that (`if` `true`) =<sub>**n**</sub> `true` and (`if` `false`) =<sub>**n**<
 > - `fst` ≐ *λp*.*p* `true`
 > - `snd` ≐ *λp*.*p* `false`
 
-##### Exercise 4.4
-
-###### Question
-
-Define macros for binary `and` and `or` prefix operators that evaluate in the natural way with `true` and `false` (so
-that `and` `true` `false` =<sub>**n**</sub> `false`, etc.).
-
-###### Answer
+> **Exercise 4.4.** Define macros for binary `and` and `or` prefix operators that evaluate in the natural way with
+> `true` and `false` (so that `and` `true` `false` =<sub>**n**</sub> `false`, etc.).
 
 - `and` ≐ *λx*.*λy* `if` *x* *y* `false`
 - `or` ≐ *λx*.*λy* `if` *x* `true` *y*
 
 #### 4.4 Encoding Pairs
 
-##### Exercise 4.5
-
-###### Question
-
-Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this section.
+> **Exercise 4.5.** Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this section.
 
 `fst` (`mkpair` *M* *N*) \\
 = (*λp*.*p* `true`) ((*λx*.*λy*.*λs*.*s* *x* *y*) *M* *N*) \\
@@ -619,13 +516,7 @@ Show that `mkpair`, `fst`, and `snd` obey the equations at the beginning of this
 
 > - `sub1` ≐ *λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)
 
-##### Exercise 4.6
-
-###### Question
-
-Show that `add1` 1 =<sub>**n**</sub> 2.
-
-###### Answer
+> **Exercise 4.6.** Show that `add1` 1 =<sub>**n**</sub> 2.
 
 `add1` 1 \\
 = (*λn*.*λf*.*λx*.*f* (*n* *f* *x*)) (*λf*.*λx*.*f* *x*) \\
@@ -635,13 +526,7 @@ Show that `add1` 1 =<sub>**n**</sub> 2.
 →<sub>**n**</sub><sup>*β*</sup> *λf*.*λx*.*f* (*f* *x*) \\
 = 2
 
-##### Exercise 4.7
-
-###### Question
-
-Show that `iszero` 1 =<sub>**n**</sub> `false`.
-
-###### Answer
+> **Exercise 4.7.** Show that `iszero` 1 =<sub>**n**</sub> `false`.
 
 `iszero` 1 \\
 = (*λn*.*n* (*λx*.`false`) `true`) (*λf*.*λx*.*f* *x*) \\
@@ -650,13 +535,7 @@ Show that `iszero` 1 =<sub>**n**</sub> `false`.
 →<sub>**n**</sub><sup>*β*</sup> (*λx*.`false`) `true` \\
 →<sub>**n**</sub><sup>*β*</sup> `false`
 
-##### Exercise 4.8
-
-###### Question
-
-Show that `sub1` 1 =<sub>**n**</sub> 0.
-
-###### Answer
+> **Exercise 4.8.** Show that `sub1` 1 =<sub>**n**</sub> 0.
 
 `sub1` 1 \\
 = (*λn*.*λf*.*λx*.`snd` (*n* (`wrap` *f*) ⟨`true`, *x*⟩)) (*λf*.*λx*.*f* *x*) \\
@@ -672,26 +551,14 @@ Show that `sub1` 1 =<sub>**n**</sub> 0.
 ↠<sub>**n**</sub> *λf*.*λx*.*x* \\
 = 0
 
-##### Exercise 4.9
-
-###### Question
-
-Define `mult` using the technique that allowed us to define `add`. In other words, implement (`mult` *n* *m*) as *n*
-additions of *m* to 0 by exploiting the fact that *n* itself applies a function *n* times. Hint: what kind of value is
-(`add` *m*)?
-
-###### Answer
+> **Exercise 4.9.** Define `mult` using the technique that allowed us to define `add`. In other words, implement (`mult`
+> *n* *m*) as *n* additions of *m* to 0 by exploiting the fact that *n* itself applies a function *n* times. Hint: what
+> kind of value is (`add` *m*)?
 
 `mult` ≐ *λn*.*λm*.*λf*.*m* (*n* *f*)
 
-##### Exercise 4.10
-
-###### Question
-
-The *λ*-calculus provides no mechanism for signalling an error. What happens when `sub1` is applied to 0? What happens
-when `iszero` is applied to `true`?
-
-###### Answer
+> **Exercise 4.10.** The *λ*-calculus provides no mechanism for signalling an error. What happens when `sub1` is applied
+> to 0? What happens when `iszero` is applied to `true`?
 
 Let’s try:
 
@@ -709,3 +576,12 @@ Let’s try:
 →<sub>**n**</sub><sup>*β*</sup> *λy*.*λx*.`false`
 
 I think that’s it.
+
+#### 4.6 Recursion
+
+##### 4.6.1 Recursion via Self-Application
+
+> **Exercise 4.11.** Define a macro `mksum` such that (`mksum` `mksum`) acts like a “sum” function by consuming a number
+> *n* and adding all the numbers from 0 to *n*.
+
+`mksum` ≐ *λt*.*λn* `if` (`iszero` *n*) 0 (`add` ((*t* *t*) (`sub1` *n*)) *n*)
