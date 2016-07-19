@@ -619,13 +619,13 @@ I think that’s it.
 > **Exercise 4.12.** Prove that *M* (`Y` *M*) =<sub>**n**</sub> (`Y` *M*) for any *M*.
 {: exercise}
 
-(`Y` *M*) \
-= ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*) \
-→<sub>**n**</sub><sup>*β*</sup> (*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*)) \
+(`Y` *M*) \\
+= ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*) \\
+→<sub>**n**</sub><sup>*β*</sup> (*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*)) \\
 →<sub>**n**</sub><sup>*β*</sup> (*M* ((*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*))))
 
-*M* (`Y` *M*) \
-= *M* ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*)
+*M* (`Y` *M*) \\
+= *M* ((*λf*.(*λx*.*f* (*x* *x*)) (*λx*.*f* (*x* *x*))) *M*) \\
 →<sub>**n**</sub><sup>*β*</sup> (*M* ((*λx*.*M* (*x* *x*)) (*λx*.*M* (*x* *x*))))
 
 The claim holds.
