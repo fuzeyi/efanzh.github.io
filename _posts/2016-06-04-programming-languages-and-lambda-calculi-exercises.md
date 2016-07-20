@@ -684,6 +684,7 @@ a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no nor
 > **Exercise 5.1.** Show a reduction of \\
 > (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) ((*λx*.*x* ⸢10⸣) *λyz*.(+ *z* *y*)) \\
 > to a value with →<sub>**v**</sub>.
+{: exercise}
 
 (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) ((*λx*.*x* ⸢10⸣) *λyz*.(+ *z* *y*)) \\
 →<sub>**v**</sub> (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) (*λyz*.(+ *z* *y*) ⸢10⸣) \\
@@ -702,6 +703,7 @@ a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no nor
 > - *eval*<sub>1</sub>(*M*) = `function+` if *M* =<sub>**v**</sub> *λX*.*λY*.*N*
 >
 > Is *eval*<sub>1</sub> a function? If so, prove it. If not, provide a counter-example.
+{: exercise}
 
 No, *eval*<sub>1</sub> is not a function:
 
