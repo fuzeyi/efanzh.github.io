@@ -663,6 +663,8 @@ The claim holds.
 
 *Why does the question say “a list of booleans”? I think `length` can be applied to a list of anything.*
 
+#### 4.7 Facts About the *λ*-Calculus
+
 > **Exercise 4.15.** Prove that ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no normal form.
 {: exercise}
 
@@ -672,3 +674,21 @@ We can only apply *β* reduction to ((*λx*.*x* *x*) (*λx*.*x* *x*)) using norm
 
 So, after the only reduction we can do, we get the original expression. This leads to a infinite loop, so we can’t reach
 a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no normal form.
+
+## Part II: Models of Realistic Languages
+
+### Chapter 5: ISWIM
+
+#### 5.2 ISWIM Reductions
+
+> **Exercise 5.1.** Show a reduction of \\
+> (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) ((*λx*.*x* ⸢10⸣) *λyz*.(+ *z* *y*)) \\
+> to a value with →<sub>**v**</sub>.
+
+(*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) ((*λx*.*x* ⸢10⸣) *λyz*.(+ *z* *y*)) \\
+→<sub>**v**</sub> (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) (*λyz*.(+ *z* *y*) ⸢10⸣) \\
+→<sub>**v**</sub> (*λw*.(− (*w* ⸢1⸣) ⸢5⸣)) (*λz*.(+ *z* ⸢10⸣)) \\
+→<sub>**v**</sub> (− ((*λz*.(+ *z* ⸢10⸣)) ⸢1⸣) ⸢5⸣) \\
+→<sub>**v**</sub> (− (+ ⸢1⸣ ⸢10⸣) ⸢5⸣) \\
+→<sub>**v**</sub> (− ⸢11⸣ ⸢5⸣) \\
+→<sub>**v**</sub> ⸢6⸣
