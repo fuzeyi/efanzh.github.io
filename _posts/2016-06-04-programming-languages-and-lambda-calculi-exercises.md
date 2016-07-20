@@ -665,3 +665,10 @@ The claim holds.
 
 > **Exercise 4.15.** Prove that ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no normal form.
 {: exercise}
+
+We can only apply *β* reduction to ((*λx*.*x* *x*) (*λx*.*x* *x*)) using normal order reduction:
+
+((*λx*.*x* *x*) (*λx*.*x* *x*)) *β* ((*λx*.*x* *x*) (*λx*.*x* *x*))
+
+So, after the only reduction we can do, we get the original expression. This leads to a infinite loop, so we can’t reach
+a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no normal form.
