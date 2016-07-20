@@ -692,3 +692,21 @@ a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no nor
 →<sub>**v**</sub> (− (+ ⸢1⸣ ⸢10⸣) ⸢5⸣) \\
 →<sub>**v**</sub> (− ⸢11⸣ ⸢5⸣) \\
 →<sub>**v**</sub> ⸢6⸣
+
+#### 5.4 Evaluation
+
+> **Exercise 5.2.** Suppose that we try to strengthen the evaluation function as follows:
+>
+> - *eval*<sub>1</sub>(*M*) = *b* if *M* =<sub>**v**</sub> *b*
+> - *eval*<sub>1</sub>(*M*) = `function1` if *M* =<sub>**v**</sub> *λX*.*N* and *N* ≠ *λY*.*N*′ for any *Y*, *N*′
+> - *eval*<sub>1</sub>(*M*) = `function+` if *M* =<sub>**v**</sub> *λX*.*λY*.*N*
+>
+> Is *eval*<sub>1</sub> a function? If so, prove it. If not, provide a counter-example.
+
+No, *eval*<sub>1</sub> is not a function:
+
+- *λx*.(*λy*.*y*) (*λz*.*z*) =<sub>**v**</sub> *λx*.(*λy*.*y*) (*λz*.*z*)
+- *λx*.(*λy*.*y*) (*λz*.*z*) =<sub>**v**</sub> *λx*.*λz*.*z*
+
+So *eval*<sub>1</sub>(*λx*.(*λy*.*y*) (*λz*.*z*)) = `function1`, and
+*eval*<sub>1</sub>(*λx*.(*λy*.*y*) (*λz*.*z*)) = `function+`. Therefore *eval*<sub>1</sub> is not a function.
