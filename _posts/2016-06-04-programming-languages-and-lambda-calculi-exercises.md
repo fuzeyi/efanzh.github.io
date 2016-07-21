@@ -712,3 +712,39 @@ No, *eval*<sub>1</sub> is not a function:
 
 So *eval*<sub>1</sub>(*λx*.(*λy*.*y*) (*λz*.*z*)) = `function1`, and
 *eval*<sub>1</sub>(*λx*.(*λy*.*y*) (*λz*.*z*)) = `function+`. Therefore *eval*<sub>1</sub> is not a function.
+
+#### 5.5 Consistency
+
+> **Theorem 5.5** [**Diamond Property for** ↠<sub>**v**</sub> ]: If *L* ↠<sub>**v**</sub> *M* and
+> *L* ↠<sub>**v**</sub> *N*, then there exists an expression *K* such that *M* ↠<sub>**v**</sub> *K* and
+> *N* ↠<sub>**v**</sub> *K*.
+
+> **Theorem 5.6** [**Diamond Property for** ↪<sub>**v**</sub>]: If *L* ↪<sub>**v**</sub> *M* and
+> *L* ↪<sub>**v**</sub> *N*, then there exists an expression *K* such that *M* ↪<sub>**v**</sub> *K* and
+> *N* ↪<sub>**v**</sub> *K*.
+
+> - *M* ↪<sub>**v**</sub> *N* if *M* =<sub>*α*</sub> *N*
+> - (*o*<sup>*n*</sup> *b*<sub>1</sub> … *b*<sub>*n*</sub>) ↪<sub>**v**</sub> δ(*o*<sup>*n*</sup>, *b*<sub>1</sub>, … *b*<sub>*n*</sub>) if δ(*o*<sup>*n*</sup>, *b*<sub>1</sub>, … *b*<sub>*n*</sub>) is defined
+> - ((*λX*.*M*) *N*) ↪<sub>**v**</sub> *M*′[*X* ← *V* ] if *M* ↪<sub>**v**</sub> *M*′ and *N* ↪<sub>**v**</sub> *V*
+> - (*M* *N*) ↪<sub>**v**</sub> (*M*′ *N*′) if *M* ↪<sub>**v**</sub> *M*′ and *N* ↪<sub>**v**</sub> *N*′
+> - (*λX*.*M*) ↪<sub>**v**</sub> (*λX*.*M*′) if *M* ↪<sub>**v**</sub> *M*′ [^1]
+> - (*o*<sup>*n*</sup> *M*<sub>1</sub> … *M*<sub>*n*</sub>) ↪<sub>**v**</sub> (*o*<sup>*n*</sup> *M*<sub>1</sub>′ … *M*<sub>*n*</sub>′) if *M*<sub>*i*</sub> ↪<sub>**v**</sub> *M*<sub>*i*</sub>′ , *i* ∈ [1, *n*]
+
+[^1]: Different than the manuscript, I think the manuscript is wrong.
+
+> **Exercise 5.3.** Prove that if *N* ↪<sub>**v**</sub> *N*′, then *M*[*X* ← *N*] ↪<sub>**v**</sub> *M*[*X* ← *N*′].
+{: exercise}
+
+*TODO.*
+
+> **Exercise 5.4.** Prove that if *X* ∉ ℱ𝒱(*L*) then \\
+> *K*[*X* ← *L*][*X*′ ← *M*[*X* ← *L*]] =<sub>*α*</sub> *K*[*X*′ ← *M*][*X* ← *L*]
+{: exercise}
+
+*TODO.*
+
+> **Exercise 5.5.** Prove that the transitive–reflexive closure of the parallel reduction ↪<sub>**v**</sub> is the same
+> as ↠<sub>**v**</sub>. This fact, along with Theorem 5.6, supports the proof of Theorem 5.5.
+{: exercise}
+
+*TODO.*
