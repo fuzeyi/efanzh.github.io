@@ -792,3 +792,16 @@ Induction over the structure of *M*:
 {: exercise}
 
 *TODO.*
+
+#### 5.6 Observational Equivalence
+
+> **Exercise 5.6.** Consider the following evaluation function *eval*<sub>0</sub>, plus its associated observational
+> equivalence relation ≃<sub>0</sub>:
+>
+> - *eval*<sub>0</sub>(*M*) = `value` if *M* =<sub>**v**</sub> *V* for some *V*
+> - *M* ≃<sub>0</sub> *N* if *eval*<sub>0</sub>(*C*[*M*]) = *eval*<sub>0</sub>(*C*[*N*]) for all *C*
+>
+> Does *M* ≃<sub>0</sub> *N* imply anything about *M* ≃<sub>**v**</sub> *N*? Sketch an argument for your answer.
+{: exercise}
+
+*TODO.*
