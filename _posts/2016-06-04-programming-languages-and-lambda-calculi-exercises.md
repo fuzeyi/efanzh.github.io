@@ -681,12 +681,12 @@ a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no nor
 
 #### 5.1 ISWIM Expressions
 
-> - *M*, *N*, *L*, *K* = *X* | (*λX*.*M*) | (*M* *M*) | *b* | (*o*<sup>*n*</sup> *M* … *M*)
+> - *M*, *N*, *L*, *K* = *X* \| (*λX*.*M*) \| (*M* *M*) \| *b* \| (*o*<sup>*n*</sup> *M* … *M*)
 > - *X* = a variable: *x*, *y*, …
 > - *b* = a basic constant
 > - *o*<sup>*n*</sup> = an *n*-ary primitive operation
 
-> - *b* = {⸢*n*⸣ | *n* ∈ ℤ}
+> - *b* = {⸢*n*⸣ \| *n* ∈ ℤ}
 > - *o*<sup>1</sup> = {`add1`, `sub1`, `iszero`}
 > - *o*<sup>2</sup> = {+, −, ∗, ↑}
 
@@ -781,8 +781,8 @@ Induction over the structure of *M*:
 
         Analogous to the previous case.
 
-> **Exercise 5.4.** Prove that if *X* ∉ ℱ𝒱(*L*) then \\
-> *K*[*X* ← *L*][*X*′ ← *M*[*X* ← *L*]] =<sub>*α*</sub> *K*[*X*′ ← *M*][*X* ← *L*]
+> **Exercise 5.4.** Prove that if *X* ∉ ℱ𝒱(*L*) then *K*[*X* ← *L*][*X*′ ← *M*[*X* ← *L*]] =<sub>*α*</sub>
+> *K*[*X*′ ← *M*][*X* ← *L*]
 {: exercise}
 
 *TODO.*
