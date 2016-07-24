@@ -679,6 +679,17 @@ a normal form expression, therefore ((*λx*.*x* *x*) (*λx*.*x* *x*)) has no nor
 
 ### Chapter 5: ISWIM
 
+#### 5.1 ISWIM Expressions
+
+> - *M*, *N*, *L*, *K* = *X* | (*λX*.*M*) | (*M* *M*) | *b* | (*o*<sup>*n*</sup> *M* … *M*)
+> - *X* = a variable: *x*, *y*, …
+> - *b* = a basic constant
+> - *o*<sup>*n*</sup> = an *n*-ary primitive operation
+
+> - *b* = {⸢*n*⸣ | *n* ∈ ℤ}
+> - *o*<sup>1</sup> = {`add1`, `sub1`, `iszero`}
+> - *o*<sup>2</sup> = {+, −, ∗, ↑}
+
 #### 5.2 ISWIM Reductions
 
 > **Exercise 5.1.** Show a reduction of \\
@@ -735,7 +746,40 @@ So *eval*<sub>1</sub>(*λx*.(*λy*.*y*) (*λz*.*z*)) = `function1`, and
 > **Exercise 5.3.** Prove that if *N* ↪<sub>**v**</sub> *N*′, then *M*[*X* ← *N*] ↪<sub>**v**</sub> *M*[*X* ← *N*′].
 {: exercise}
 
-*TODO.*
+Induction over the structure of *M*:
+
+- Base cases
+    - **Case** *X*:
+
+        If *M* = *X*, *M*[*X* ← *N*] = *N*, and *M*[*X* ← *N*′] = *N*′, therefore *M*[*X* ← *N*] ↪<sub>**v**</sub>
+        *M*[*X* ← *N*′]. Otherwise *M*[*X* ← *N*] = *M*, and *M*[*X* ← *N*′] = *M*, therefore *M*[*X* ← *N*]
+        ↪<sub>**v**</sub> *M*[*X* ← *N*′]. The claim holds.
+
+    - **Case** *b*:
+
+        *b*[*X* ← *N*] = *b*, *b*[*X* ← *N*′] = *b*, therefore *b*[*X* ← *N*] ↪<sub>**v**</sub> *b*[*X* ← *N*′], the
+        claim holds.
+
+- Inductive cases:
+    - **Case** (*λX*′.*M*):
+
+        If *X*′ = *X*, (*λX*′.*M*)[*X* ← *N*] = (*λX*′.*M*), (*λX*′.*M*)[*X* ← *N*′] = (*λX*′.*M*), the claim holds.
+
+        Otherwise, (*λX*′.*M*)[*X* ← *N*] = (*λX*′.*M*[*X* ← *N*]), (*λX*′.*M*)[*X* ← *N*′] = (*λX*′.*M*[*X* ← *N*′]).
+        By induction, *M*[*X* ← *N*] ↪<sub>**v**</sub> *M*[*X* ← *N*′], therefore (*λX*′.*M*[*X* ← *N*])
+        ↪<sub>**v**</sub> (*λX*′.*M*[*X* ← *N*′]), the claim holds.
+
+    - **Case** (*M*<sub>1</sub> *M*<sub>2</sub>):
+
+        (*M*<sub>1</sub> *M*<sub>2</sub>)[*X* ← *N*] = (*M*<sub>1</sub>[*X* ← *N*] *M*<sub>2</sub>[*X* ← *N*]),
+        (*M*<sub>1</sub> *M*<sub>2</sub>)[*X* ← *N*′] = (*M*<sub>1</sub>[*X* ← *N*′] *M*<sub>2</sub>[*X* ← *N*′]). By
+        induction, *M*<sub>1</sub>[*X* ← *N*] ↪<sub>**v**</sub> *M*<sub>1</sub>[*X* ← *N*′], *M*<sub>2</sub>[*X* ← *N*]
+        ↪<sub>**v**</sub> *M*<sub>2</sub>[*X* ← *N*′], therefore (*M*<sub>1</sub> *M*<sub>2</sub>)[*X* ← *N*]
+        ↪<sub>**v**</sub> (*M*<sub>1</sub> *M*<sub>2</sub>)[*X* ← *N*′], the claim holds.
+
+    - **Case** (*o*<sup>*n*</sup> *M* … *M*):
+
+        Analogous to the previous case.
 
 > **Exercise 5.4.** Prove that if *X* ∉ ℱ𝒱(*L*) then \\
 > *K*[*X* ← *L*][*X*′ ← *M*[*X* ← *L*]] =<sub>*α*</sub> *K*[*X*′ ← *M*][*X* ← *L*]
