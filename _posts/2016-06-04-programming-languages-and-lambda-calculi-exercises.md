@@ -398,6 +398,23 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 
 #### 4.2 *λ*-Calculus Grammar and Reductions
 
+> - *M*, *N*, *L* = *X* \| (*λX*.*M*) | (*M* *M*)
+> - *X* = a variable: *x*, *y*, …
+
+> - ℱ𝒱(*X*) = {*X*}
+> - ℱ𝒱((*λX*.*M*)) = ℱ𝒱(*M*) \ {*X*}
+> - ℱ𝒱((*M*<sub>1</sub> *M*<sub>2</sub>)) = ℱ𝒱(*M*<sub>1</sub>) ∪ ℱ𝒱(*M*<sub>2</sub>)
+
+> - *X*<sub>1</sub>[*X*<sub>1</sub> ← *M*] = *M*
+> - *X*<sub>2</sub>[*X*<sub>1</sub> ← *M*] = *X*<sub>2</sub> where *X*<sub>1</sub> ≠ *X*<sub>2</sub>
+> - (*λX*<sub>1</sub>.*M*<sub>1</sub>)[*X*<sub>1</sub> ← *M*<sub>2</sub>] = (*λX*<sub>1</sub>.*M*<sub>1</sub>)
+> - (*λX*<sub>1</sub>.*M*<sub>1</sub>)[*X*<sub>2</sub> ← *M*<sub>2</sub>] =
+>     (*λX*<sub>3</sub>.*M*<sub>1</sub>[*X*<sub>1</sub> ← *X*<sub>3</sub>][*X*<sub>2</sub> ← *M*<sub>2</sub>])
+>     where *X*<sub>1</sub> ≠ *X*<sub>2</sub>, *X*<sub>3</sub> ∉ ℱ𝒱(*M*<sub>2</sub>)
+>     and *X*<sub>3</sub> ∉ ℱ𝒱(*M*<sub>1</sub>) \ {*X*<sub>1</sub>}
+> - (*M*<sub>1</sub> *M*<sub>2</sub>)[X ← *M*<sub>3</sub>] =
+>     (*M*<sub>1</sub>[*X* ← *M*<sub>3</sub>] *M*<sub>2</sub>[*X* ← *M*<sub>3</sub>])
+
 > **Exercise 4.1.** Reduce the following expressions with →<sub>**n**</sub> until no more
 > →<sub>**n**</sub><sup>*β*</sup> reductions are possible. Show all steps.
 >
