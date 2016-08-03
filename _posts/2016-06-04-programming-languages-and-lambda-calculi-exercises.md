@@ -398,7 +398,7 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 
 #### 4.2 *λ*-Calculus Grammar and Reductions
 
-> - *M*, *N*, *L* = *X* \| (*λX*.*M*) | (*M* *M*)
+> - *M*, *N*, *L* = *X* \| (*λX*.*M*) \| (*M* *M*)
 > - *X* = a variable: *x*, *y*, …
 
 > - ℱ𝒱(*X*) = {*X*}
