@@ -6,7 +6,7 @@
             <button class="search-button" type="submit">🔍</button>
         </form>
         <nav>
-            <ul class="nav-list"><!-- {% page.url %} -->
+            <ul class="nav-list"><!-- {{ page.url }} -->
                 <li{% if page.url == '/index.html' %} class="selected-page"{% endif %}><a href="{{ site.baseurl }}/">Blog</a></li>
 {% for p in site.my-pages %}                <li{% if p.url == page.url %} class="selected-page"{% endif %}><a href="{{ site.baseurl }}{{ p.url }}">{{ p.title }}</a></li>
 {% endfor %}{% for p in site.links %}                <li{% if p.url == page.url %} class="selected-page"{% endif %}><a href="{{ p.url }}">{{ p.title }}</a></li>
