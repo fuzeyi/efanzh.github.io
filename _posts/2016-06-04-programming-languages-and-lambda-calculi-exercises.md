@@ -415,6 +415,12 @@ Since *B*<sub>0</sub> =<sub>**r**</sub> *R*<sub>0</sub> for some *R*<sub>0</sub>
 > - (*M*<sub>1</sub> *M*<sub>2</sub>)[*X* ← *M*<sub>3</sub>] =
 >     (*M*<sub>1</sub>[*X* ← *M*<sub>3</sub>] *M*<sub>2</sub>[*X* ← *M*<sub>3</sub>])
 
+> - (*λX*<sub>1</sub>.*M*) *α* (*λX*<sub>2</sub>.*M*[*X*<sub>1</sub> ← *X*<sub>2</sub>]) where *X*<sub>2</sub> ∉ ℱ𝒱(*M*)
+> - ((*λX*.*M*<sub>1</sub>) *M*<sub>2</sub>) *β* *M*<sub>1</sub>[*X* ← *M*<sub>2</sub>]
+> - (*λX*.(*M* *X*)) *η* *M* where *X* ∉ ℱ𝒱(*M*)
+
+> - **n** = *α* ∪ *β* ∪ *η*
+
 > **Exercise 4.1.** Reduce the following expressions with →<sub>**n**</sub> until no more
 > →<sub>**n**</sub><sup>*β*</sup> reductions are possible. Show all steps.
 >
