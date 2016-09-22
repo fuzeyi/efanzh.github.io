@@ -4,15 +4,19 @@ title: EFanZh’s Visual Studio Code configuration
 
 ```json
 {
-    "editor.fontFamily": "Consolas, 'Segoe UI Symbol', 'Source Han Sans SC', monospace",
+    "editor.fontLigatures": true,
     "editor.fontSize": 12,
     "editor.formatOnType": true,
     "editor.insertSpaces": true,
     "editor.mouseWheelZoom": true,
     "editor.renderControlCharacters": true,
+    "editor.renderIndentGuides": true,
     "editor.renderWhitespace": true,
     "editor.rulers": [120],
-    "editor.wrappingColumn": 1200,
-    "files.trimTrailingWhitespace": true
+    "editor.wrappingColumn": -1,
+    "extensions.autoUpdate": true,
+    "files.trimTrailingWhitespace": true,
+    "window.openFilesInNewWindow": false,
+    "window.reopenFolders": "none"
 }
 ```
