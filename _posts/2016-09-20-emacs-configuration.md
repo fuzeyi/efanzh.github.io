@@ -10,10 +10,11 @@ title: EFanZh’s Emacs configuration
 (tool-bar-mode 0)
 
 ;;; Global variables.
+(setq-default auto-save-default nil)
 (setq-default fill-column 120)
+(setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-screen t)
 (setq-default make-backup-file nil)
-(setq-default indent-tabs-mode nil)
 (setq-default visible-bell t)
 
 ;;; Column-Number mode.
