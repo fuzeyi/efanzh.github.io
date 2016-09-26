@@ -14,7 +14,7 @@ title: EFanZh’s Emacs configuration
 (setq-default fill-column 120)
 (setq-default indent-tabs-mode nil)
 (setq-default inhibit-startup-screen t)
-(setq-default make-backup-file nil)
+(setq-default make-backup-files nil)
 (setq-default visible-bell t)
 
 ;;; Column-Number mode.
