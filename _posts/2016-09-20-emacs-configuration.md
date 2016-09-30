@@ -21,12 +21,14 @@ title: EFanZh’s Emacs configuration
 (column-number-mode t)
 
 ;;; Global-Hl-Line mode.
-(global-hl-line-mode t)
+(when (display-graphic-p)
+  (global-hl-line-mode t))
 
 ;;; Global-Whitespace mode.
 (global-whitespace-mode t)
 (setq-default whitespace-action '(auto-cleanup))
 (setq-default whitespace-line-column nil)
+(setq-default whitespace-style (remove 'newline-mark whitespace-style))
 (set-face-background 'whitespace-space nil)
 
 ;;; Global-Visual-Line mode.
@@ -34,10 +36,15 @@ title: EFanZh’s Emacs configuration
 
 ;;; Linum mode.
 (global-linum-mode t)
-(when (not (display-graphic-p))
-  (setq-default linum-format "%d "))
+(unless (display-graphic-p)
+  (setq-default linum-format (lambda (line)
+                               (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
+                                 (propertize (format (format "%%%dd│" w) line)
+                                             'face
+                                             'linum)))))
 
 ;;; Show-Paren mode.
+(setq-default show-paren-delay 0)
 (show-paren-mode t)
 
 ;;; Misc.
