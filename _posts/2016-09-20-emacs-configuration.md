@@ -3,11 +3,24 @@ title: EFanZh’s Emacs configuration
 ---
 
 ```elisp
+;; Added by Package.el.  This must come before configurations of
+;; installed packages.  Don't delete this line.  If you don't want it,
+;; just comment it out by adding a semicolon to the start of the line.
+;; You may delete these explanatory comments.
+(package-initialize)
+
 ;;; Theme.
 (load-theme 'leuven)
 
 ;;; UI settings.
 (tool-bar-mode 0)
+
+;;; Font settings.
+(add-to-list 'default-frame-alist '(font . "Consolas 9"))
+(dolist (charset '(bopomofo cjk-misc han kana symbol))
+  (set-fontset-font t
+                    charset
+                    (font-spec :family "Microsoft YaHei" :size 12)))
 
 ;;; Global variables.
 (setq-default auto-save-default nil)
