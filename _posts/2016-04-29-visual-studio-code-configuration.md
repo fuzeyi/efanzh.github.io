@@ -11,7 +11,7 @@ title: EFanZh’s Visual Studio Code configuration
     "editor.mouseWheelZoom": true,
     "editor.renderControlCharacters": true,
     "editor.renderIndentGuides": true,
-    "editor.renderWhitespace": true,
+    "editor.renderWhitespace": "all",
     "editor.rulers": [120],
     "editor.wrappingColumn": -1,
     "extensions.autoUpdate": true,
