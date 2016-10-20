@@ -52,11 +52,8 @@ pre.highlight
     color: #fafafa;
     display: flex;
     justify-content: space-between;
-    left: 0;
-    position: fixed;
-    top: 0;
+    margin: 0 -48px;
     white-space: nowrap;
-    width: 100%;
 }
 
 .title
@@ -146,8 +143,7 @@ pre.highlight
 
 .main
 {
-    display: block; /* IE doesn't recognize <main> element. */
-    margin: 96px auto 48px auto;
+    margin: 48px auto;
     max-width: 960px;
 }
 
