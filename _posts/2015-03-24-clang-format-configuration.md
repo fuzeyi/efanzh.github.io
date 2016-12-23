@@ -8,15 +8,15 @@ This is my [ClangFormat](http://clang.llvm.org/docs/ClangFormat.html) configurat
 ---
 BasedOnStyle: Chromium
 AccessModifierOffset: -4
-AlignOperands: false
 AlignTrailingComments: false
 AllowShortFunctionsOnASingleLine: None
-BinPackArguments: false
+BinPackParameters: true
 BreakBeforeBraces: Allman
 BreakBeforeTernaryOperators: false
 ColumnLimit: 120
 Cpp11BracedListStyle: false
 IndentWidth: 4
+IndentWrappedFunctionNames: true
 NamespaceIndentation: All
 PenaltyBreakBeforeFirstCallParameter: 800
 PenaltyBreakComment: 100
@@ -25,6 +25,7 @@ PenaltyBreakString: 500
 PenaltyExcessCharacter: 200
 PenaltyReturnTypeOnItsOwnLine: 1000
 PointerAlignment: Right
+SortIncludes: true
 SpacesBeforeTrailingComments: 1
 Standard: Cpp11
 TabWidth: 4
